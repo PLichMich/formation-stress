@@ -1,17 +1,22 @@
 ---
+import Master from '../layouts/Master.astro';
+import Hero from '../components/landing/Hero.astro';
+import WhyUs from '../components/landing/WhyUs.astro';
+import Services from '../components/landing/Services.astro';
+import CallToAction from '../components/landing/CallToAction.astro';
+import Features from '../components/landing/Features.astro';
+import RecentPosts from '../components/landing/RecentPosts.astro';
 
+// On importera ici nos futurs composants (About, Services, etc.)
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Master title="Accueil | Formation Gestion du Stress">
+    
+    <Hero />
+    <WhyUs />
+    <Services />
+    <CallToAction />
+    <Features />
+    <RecentPosts />
+
+</Master>
