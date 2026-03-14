@@ -1,0 +1,31 @@
+---
+// On récupère la liste des articles envoyée par la page
+const { recentPosts = [] } = Astro.props;
+---
+<div class="col-lg-4 sidebar">
+  <div class="widgets-container">
+
+    <div class="search-widget widget-item">
+      <h3 class="widget-title">Recherche</h3>
+      <form action="">
+        <input type="text">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div>
+
+    <div class="recent-posts-widget widget-item">
+      <h3 class="widget-title">Articles Récents</h3>
+
+      {recentPosts.slice(0, 5).map((post) => (
+        <div class="post-item">
+          <img src={post.image} alt="" class="flex-shrink-0">
+          <div>
+            <h4><a href={post.url}>{post.title}</a></h4>
+            <time>{post.date}</time>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    </div>
+</div>

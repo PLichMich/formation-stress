@@ -1,0 +1,86 @@
+---
+import Master from '../layouts/Master.astro';
+import Sidebar from '../components/Sidebar.astro';
+
+const posts = [
+  {
+    title: "Comment calmer son stress en 3 minutes",
+    category: "Respiration",
+    image: "/assets/img/blog/blog-1.jpg",
+    author: "StressLess Admin",
+    date: "14 Mars 2026",
+    url: "/blog/respiration-3-minutes"
+  },
+  {
+    title: "Le burn-out : prévenir plutôt que guérir",
+    category: "Entreprise",
+    image: "/assets/img/blog/blog-2.jpg",
+    author: "Expert Stress",
+    date: "12 Mars 2026",
+    url: "/blog/prevenir-burn-out"
+  },
+  {
+    title: "La cohérence cardiaque au quotidien",
+    category: "Bien-être",
+    image: "/assets/img/blog/blog-3.jpg",
+    author: "StressLess Admin",
+    date: "10 Mars 2026",
+    url: "/blog/coherence-cardiaque"
+  }
+];
+---
+
+<Master title="Blog | StressLess" bodyClass="blog-page">
+
+  <div class="page-title dark-background" data-aos="fade" style="background-image: url(/assets/img/blog-page-title-bg.jpg);">
+    <div class="container">
+      <h1>Blog</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="/">Accueil</a></li>
+          <li class="current">Blog</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-8">
+        <section id="blog-posts" class="blog-posts section">
+          <div class="row gy-4">
+            
+            {posts.map((post) => (
+              <div class="col-lg-6">
+                <article>
+                  <div class="post-img">
+                    <img src={post.image} alt={post.title} class="img-fluid" />
+                  </div>
+
+                  <p class="post-category">{post.category}</p>
+
+                  <h2 class="title">
+                    <a href={post.url}>{post.title}</a>
+                  </h2>
+
+                  <div class="d-flex align-items-center">
+                    <div class="post-meta">
+                      <p class="post-author">{post.author}</p>
+                      <p class="post-date">
+                        <time>{post.date}</time>
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            ))}
+
+          </div>
+        </section>
+      </div>
+
+      <Sidebar recentPosts={posts} />
+    </div>
+  </div>
+
+</Master>
