@@ -14,10 +14,10 @@ import Master from '../layouts/Master.astro';
         </ol>
       </nav>
     </div>
-  </div><section id="contact" class="contact section">
+  </div>
 
+  <section id="contact" class="contact section">
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-
       <div class="row gy-4">
 
         <div class="col-lg-5">
@@ -25,54 +25,76 @@ import Master from '../layouts/Master.astro';
             <i class="bi bi-geo-alt flex-shrink-0"></i>
             <div>
               <h3>Adresse</h3>
-              <p>Ton adresse, 7100 La Louvière, Belgique</p>
+              <p><a href="https://www.google.com/maps/place/Centre+th%C3%A9rapeutique+Les+Oranges/@50.4349607,4.1812638,419m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47c2395ff050adc7:0x2579e4d4cb377c04!8m2!3d50.4349573!4d4.1838387!16s%2Fg%2F11h0mjncyf?authuser=0&entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Rue Joseph Wauters, 7134 Peronnes-Lez-Binche</a> </p>
             </div>
-          </div><div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+          </div>
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
             <i class="bi bi-telephone flex-shrink-0"></i>
             <div>
               <h3>Appelez-moi</h3>
-              <p>+32 000 00 00 00</p>
+              <p><a href="tel:+32486261979">0486/26.19.79</a></p>
             </div>
-          </div><div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+          </div>
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
             <i class="bi bi-envelope flex-shrink-0"></i>
             <div>
               <h3>Email</h3>
-              <p>contact@stressless.be</p>
+              <p>michael.plichart@gmail.com</p>
             </div>
-          </div></div>
+          </div>
+        </div>
 
         <div class="col-lg-7">
-          <form action="#" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
+          <form id="contact-form" class="custom-form" data-aos="fade-up" data-aos-delay="500">
             <div class="row gy-4">
-
               <div class="col-md-6">
-                <input type="text" name="name" class="form-control" placeholder="Votre Nom" required="">
+                <input type="text" name="name" class="form-control" placeholder="Votre Nom" required>
               </div>
-
-              <div class="col-md-6 ">
-                <input type="email" class="form-control" name="email" placeholder="Votre Email" required="">
+              <div class="col-md-6">
+                <input type="email" name="email" class="form-control" placeholder="Votre Email" required>
               </div>
-
               <div class="col-md-12">
-                <input type="text" class="form-control" name="subject" placeholder="Sujet" required="">
+                <input type="text" name="subject" class="form-control" placeholder="Sujet" required>
               </div>
-
               <div class="col-md-12">
-                <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                <textarea name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
               </div>
-
               <div class="col-md-12 text-center">
-                <div class="loading">Chargement...</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Votre message a été envoyé. Merci !</div>
-
-                <button type="submit">Envoyer</button>
+                <div id="form-loader" style="display:none;">Chargement...</div>
+                <div id="form-success" style="display:none; color: green; margin-bottom: 10px;">Votre message a été envoyé. Merci !</div>
+                <button type="submit" id="submit-btn" style="background: var(--accent-color); border: 0; padding: 10px 30px; color: #fff; transition: 0.4s; border-radius: 4px;">Envoyer</button>
               </div>
-
             </div>
           </form>
-        </div></div>
+        </div>
 
+      </div>
     </div>
+  </section>
 
-  </section></Master>
+  <script is:inline>
+    const form = document.getElementById('contact-form');
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwsH_87Ruj4h5Q-fXe_2aPibJzeP3GcDpRhGWLezJQ1oHi5IRiBJ2kx4FhCOw2IwHh8yg/exec'; // <--- METS TON URL ICI
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      document.getElementById('submit-btn').disabled = true;
+      document.getElementById('form-loader').style.display = 'block';
+
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          document.getElementById('form-loader').style.display = 'none';
+          document.getElementById('form-success').style.display = 'block';
+          form.reset();
+          document.getElementById('submit-btn').disabled = false;
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+          alert("Une erreur est survenue lors de l'envoi.");
+        });
+    });
+  </script>
+
+</Master>

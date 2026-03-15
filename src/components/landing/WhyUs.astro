@@ -1,80 +1,69 @@
-    <section id="why-us" class="why-us section">
+---
+// src/components/landing/WhyUs.astro
+---
+<section id="why-us" class="why-us section">
+  <div class="container">
 
-      <div class="container">
+    <div class="row gy-4">
 
-        <div class="row g-0">
-
-          <div class="col-xl-5 img-bg" data-aos="fade-up" data-aos-delay="100">
-            <img src="/assets/img/why-us-bg.jpg" alt="">
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="why-box" style="background: var(--accent-color); color: white; padding: 30px; border-radius: 10px; height: 100%;">
+          <h3>Pourquoi cette approche ?</h3>
+          <p>
+            « Bonjour, je suis le Stress. Je ne suis pas là pour vous rendre malade, mais pour vous garder en vie. »
+            <br><br>
+            Notre formation ne cherche pas à supprimer le stress — c'est impossible. Nous vous apprenons à <strong>cohabiter</strong> avec lui en comprenant ses messages et ses mécanismes physiologiques.
+          </p>
+          <div class="text-center">
+            <a href="/formations" class="more-btn"><span>Détails des sessions</span> <i class="bi bi-chevron-right"></i></a>
           </div>
-
-          <div class="col-xl-7 slides position-relative" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="swiper init-swiper">
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "centeredSlides": true,
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  },
-                  "navigation": {
-                    "nextEl": ".swiper-button-next",
-                    "prevEl": ".swiper-button-prev"
-                  }
-                }
-              </script>
-              <div class="swiper-wrapper">
-
-                <div class="swiper-slide">
-                  <div class="item">
-                    <h3 class="mb-3">Let's grow your business together</h3>
-                    <h4 class="mb-3">Optio reiciendis accusantium iusto architecto at quia minima maiores quidem, dolorum.</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ipsam perferendis asperiores explicabo vel tempore velit totam, natus nesciunt accusantium dicta quod quibusdam ipsum maiores nobis non, eum. Ullam reiciendis dignissimos laborum aut, magni voluptatem velit doloribus quas sapiente optio.</p>
-                  </div>
-                </div><!-- End slide item -->
-
-                <div class="swiper-slide">
-                  <div class="item">
-                    <h3 class="mb-3">Unde perspiciatis ut repellat dolorem</h3>
-                    <h4 class="mb-3">Amet cumque nam sed voluptas doloribus iusto. Dolorem eos aliquam quis.</h4>
-                    <p>Dolorem quia fuga consectetur voluptatem. Earum consequatur nulla maxime necessitatibus cum accusamus. Voluptatem dolorem ut numquam dolorum delectus autem veritatis facilis. Et ea ut repellat ea. Facere est dolores fugiat dolor.</p>
-                  </div>
-                </div><!-- End slide item -->
-
-                <div class="swiper-slide">
-                  <div class="item">
-                    <h3 class="mb-3">Aliquid non alias minus</h3>
-                    <h4 class="mb-3">Necessitatibus voluptatibus explicabo dolores a vitae voluptatum.</h4>
-                    <p>Neque voluptates aut. Soluta aut perspiciatis porro deserunt. Voluptate ut itaque velit. Aut consectetur voluptatem aspernatur sequi sit laborum. Voluptas enim dolorum fugiat aut.</p>
-                  </div>
-                </div><!-- End slide item -->
-
-                <div class="swiper-slide">
-                  <div class="item">
-                    <h3 class="mb-3">Necessitatibus suscipit non voluptatem quibusdam</h3>
-                    <h4 class="mb-3">Tempora quos est ut quia adipisci ut voluptas. Deleniti laborum soluta nihil est. Eum similique neque autem ut.</h4>
-                    <p>Ut rerum et autem vel. Et rerum molestiae aut sit vel incidunt sit at voluptatem. Saepe dolorem et sed voluptate impedit. Ad et qui sint at qui animi animi rerum.</p>
-                  </div>
-                </div><!-- End slide item -->
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
-
         </div>
+      </div><div class="col-lg-8 d-flex align-items-stretch">
+        <div class="row gy-4" style="width: 100%;">
 
+          <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box d-flex flex-column justify-content-center align-items-center" style="padding: 30px; border: 1px solid #eee; border-radius: 10px; height: 100%; text-align: center;">
+              <i class="bi bi-shield-check" style="font-size: 40px; color: var(--accent-color); margin-bottom: 15px;"></i>
+              <h4 style="font-weight: 700; font-size: 18px;">L'Allié Biologique</h4>
+              <p style="font-size: 14px; color: #666;">Découvrez comment l'adrénaline et le cortisol coordonnent votre survie et pourquoi votre corps réagit avant même votre pensée.</p>
+            </div>
+          </div><div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box d-flex flex-column justify-content-center align-items-center" style="padding: 30px; border: 1px solid #eee; border-radius: 10px; height: 100%; text-align: center;">
+              <i class="bi bi-puzzle" style="font-size: 40px; color: var(--accent-color); margin-bottom: 15px;"></i>
+              <h4 style="font-weight: 700; font-size: 18px;">Méthode TCC</h4>
+              <p style="font-size: 14px; color: #666;">Identifiez les erreurs de pensées et les "ultra-solutions" qui renforcent le stress au lieu de le calmer.</p>
+            </div>
+          </div><div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon-box d-flex flex-column justify-content-center align-items-center" style="padding: 30px; border: 1px solid #eee; border-radius: 10px; height: 100%; text-align: center;">
+              <i class="bi bi-journal-check" style="font-size: 40px; color: var(--accent-color); margin-bottom: 15px;"></i>
+              <h4 style="font-weight: 700; font-size: 18px;">Outils Pratiques</h4>
+              <p style="font-size: 14px; color: #666;">Journal de bord, cohérence cardiaque et relaxation de Jacobson pour une mise en pratique concrète au quotidien.</p>
+            </div>
+          </div></div>
       </div>
 
-    </section>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .why-box .more-btn {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 30px 8px 30px;
+    color: #fff;
+    border-radius: 50px;
+    transition: all ease-in-out 0.4s;
+    margin-top: 20px;
+  }
+  .why-box .more-btn:hover {
+    background: #fff;
+    color: var(--accent-color);
+  }
+  .icon-box:hover {
+    border-color: var(--accent-color) !important;
+    transform: translateY(-5px);
+    transition: 0.3s;
+  }
+</style>
