@@ -1,97 +1,108 @@
 ---
 import Master from '../layouts/Master.astro';
-
-const modules = [
-  {
-    num: "01",
-    title: "Comprendre l'Ami Physiologique",
-    desc: "Le débat avec le Stress : pourquoi l'adrénaline et le cortisol sont vos alliés de survie, pas vos ennemis.",
-    icon: "bi-activity"
-  },
-  {
-    num: "02",
-    title: "Le Filtre des Pensées (Cognitif)",
-    desc: "Identifier les erreurs de pensées, l'effet parachute et la restructuration cognitive pour apaiser l'esprit.",
-    icon: "bi-brain"
-  },
-  {
-    num: "03",
-    title: "Comportements & Lâcher-prise",
-    desc: "Sortir des pièges du contrôle excessif et des 'ultra-solutions' qui créent plus de problèmes qu'elles n'en résolvent.",
-    icon: "bi-person-walking"
-  },
-  {
-    num: "04",
-    title: "Techniques de Régulation",
-    desc: "Pratique intensive : Cohérence cardiaque et relaxation progressive de Jacobson pour dompter le corps.",
-    icon: "bi-wind"
-  },
-  {
-    num: "05",
-    title: "Pleine Conscience & Bilan",
-    desc: "Passer de la relaxation à la présence : la pleine conscience sur les sons et ancrage des acquis.",
-    icon: "bi-sun"
-  }
-];
 ---
 
-<Master title="La Formation StressLess | StressLess" bodyClass="services-page">
+<Master title="Nos Formations | StressLess">
 
-  <div class="page-title dark-background" data-aos="fade" style="background-image: url(/assets/img/services-page-title-bg.jpg);">
-    <div class="container">
-      <h1>Parcours de Formation StressLess</h1>
-      <p>Un accompagnement complet en 5 modules pour reprendre le contrôle sur votre stress.</p>
+  <div class="page-title dark-background" style="background-image: url('/assets/img/formations-collection-bg.png'); background-size: cover; background-position: center; padding: 120px 0 80px 0; position: relative;">
+    <div class="container text-center" style="position: relative; z-index: 2;">
+      <h1 style="font-size: 2.8rem; font-weight: 700;">S'outiller face au stress pour devenir acteur de votre sérénité.</h1>
+      <p class="lead mt-3">Découvrez notre collection de formations TCC conçues pour vous apprendre à "pêcher" par vous-même.</p>
     </div>
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1;"></div>
   </div>
 
-  <section id="featured-services" class="featured-services section">
+  <section class="section py-5">
     <div class="container">
-      <div class="row gy-4">
-        <div class="col-lg-12" data-aos="fade-up">
-          <div class="service-item d-flex p-5" style="background: var(--surface-color); border: 1px solid #eee; border-radius: 10px;">
-            <div class="content">
-              <span class="badge bg-primary mb-3">Formation Signature</span>
-              <h2>Maîtriser son stress : Le programme complet</h2>
-              <p>Ce parcours n'est pas une simple suite de conseils, c'est une transformation profonde. Sur plusieurs semaines, nous explorons chaque facette de votre équilibre pour construire une résilience durable.</p>
-              <div class="mt-4">
-                <a href="/inscription" class="btn btn-primary btn-lg">S'inscrire à la prochaine session</a>
+      <div class="row justify-content-center">
+        <div class="col-lg-11 col-xl-10">
+          
+          <div class="card shadow-lg border-0 mb-5" style="border-radius: 20px; overflow: hidden; background: #fff;">
+            <div class="card-body p-4 p-md-5">
+              <div class="row gy-4 align-items-center">
+                
+                <div class="col-lg-7">
+                  <span class="badge mb-2" style="background-color: var(--accent-color); color: white; padding: 8px 15px; border-radius: 50px;">Session Mars 2026</span>
+                  <h2 class="mb-3" style="color: #222; font-weight: 700;">Comprendre le stress et ses obstacles au changement par les TCC</h2>
+                  
+                  <p class="text-muted">
+                    Cette formation intensive de 5 sessions vous propose de décoder les mécanismes du stress sous un angle scientifique et humain. 
+                    En combinant la physiologie et la psychologie cognitive, nous identifions ensemble ce qui bloque votre changement.
+                  </p>
+                  
+                  <a href="https://psyhainaut.be/" target="_blank" rel="noopener noreferrer" class="agrement-card d-flex align-items-center p-3 mt-4" style="background-color: #6f42c1; color: white; border-radius: 12px; text-decoration: none; transition: 0.3s; box-shadow: 0 4px 15px rgba(102, 16, 242, 0.2);">
+                    <div class="me-3 fs-4">
+                      <i class="bi bi-shield-check"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                      <strong style="color: white;">Agrément Officiel :</strong><br>
+                      <span style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Programme éligible au remboursement PsyHainaut.</span>
+                    </div>
+                    <div class="ms-3 ps-3">
+                      <img src="/assets/img/psyhainaut.png" alt="Logo PsyHainaut" style="height: 55px; object-fit: contain;">
+                    </div>
+                  </a>
+
+                  <a href="/inscription" class="btn btn-lg w-100 mt-4" style="background: var(--accent-color); color: white; border-radius: 50px; padding: 15px; font-weight: 600; transition: 0.3s;">
+                    S'inscrire à cette formation
+                  </a>
+                </div>
+
+                <div class="col-lg-5">
+                  <div class="text-center p-4" style="background: #fdfdfd; border: 1px solid #f0f0f0; border-radius: 20px;">
+                    <h5 class="mb-4" style="font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #555;">Vos Intervenants</h5>
+                    
+                    <div class="d-flex flex-column gap-4">
+                      
+                      <div class="d-flex align-items-center text-start p-2" style="background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+                        <img src="/assets/img/team/michael.jpg" alt="Michaël Plichart" style="width: 75px; height: 75px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent-color);">
+                        <div class="ms-3">
+                          <h6 class="mb-0" style="font-weight: 700;">Michaël Plichart</h6>
+                          <small class="text-muted">Psychologue & Formateur</small>
+                        </div>
+                      </div>
+
+                      <div class="d-flex align-items-center text-start p-2" style="background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+                        <img src="/assets/img/team/david.jpg" alt="David Vandenbosch" style="width: 75px; height: 75px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent-color);">
+                        <div class="ms-3">
+                          <h6 class="mb-0" style="font-weight: 700;">David Vandenbosch</h6>
+                          <small class="text-muted">Expert TCC / ACT</small>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <p class="mt-4 small text-muted italic">
+                      <em>"Apprendre à pêcher plutôt que de recevoir un poisson."</em>
+                    </p>
+                  </div>
+                </div>
+
               </div>
             </div>
+          </div><div class="text-center mt-5">
+            <p class="text-muted">D'autres thématiques de formation seront bientôt disponibles sur cette page.</p>
           </div>
+
         </div>
       </div>
     </div>
   </section>
 
-  <section id="service-cards" class="service-cards section">
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Les 5 Modules du Programme</h2>
-    </div>
-
-    <div class="container">
-      <div class="row gy-4">
-        {modules.map((m) => (
-          <div class="col-lg-4" data-aos="fade-up">
-            <div class="card-item" style="padding: 30px; border-radius: 15px; background: #fff; box-shadow: 0px 5px 20px rgba(0,0,0,0.05); height: 100%;">
-              <div class="d-flex align-items-center mb-3">
-                <span style="font-size: 40px; font-weight: 800; color: rgba(0,0,0,0.05); margin-right: 15px;">{m.num}</span>
-                <i class={`bi ${m.icon}`} style="font-size: 24px; color: var(--accent-color);"></i>
-              </div>
-              <h4>{m.title}</h4>
-              <p style="font-size: 14px; color: #666;">{m.desc}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="call-to-action section accent-background mt-5">
-    <div class="container text-center" data-aos="zoom-in">
-      <h3>Prêt à transformer votre quotidien ?</h3>
-      <p>Places limitées par session pour garantir un suivi personnalisé de chaque participant.</p>
-      <a class="cta-btn" href="/inscription">Réserver ma place maintenant</a>
-    </div>
-  </section>
-
 </Master>
+
+<style>
+  /* Effet de survol sur la card principale */
+  .card {
+    transition: all 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  /* Effet de survol sur la card d'agrément cliquable */
+  .agrement-card:hover {
+    background-color: #520dc2 !important; /* Un violet un peu plus sombre au survol */
+    transform: scale(1.02);
+  }
+</style>
