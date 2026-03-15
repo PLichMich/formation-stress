@@ -1,0 +1,213 @@
+---
+import Master from '../layouts/Master.astro';
+
+// Liste des modules pour le rappel à gauche
+const modules = [
+  "Module 1 : Comprendre les mécanismes du stress",
+  "Module 2 : La respiration et la cohérence cardiaque",
+  "Module 3 : Optimiser son sommeil et sa récupération",
+  "Module 4 : Gérer la charge mentale au quotidien",
+  "Module 5 : Créer sa routine anti-stress sur mesure"
+];
+---
+
+<Master title="Inscription | StressLess" bodyClass="contact-page">
+
+  <div class="page-title dark-background" data-aos="fade" style="background-image: url(/assets/img/contact-page-title-bg.jpg);">
+    <div class="container">
+      <h1>Inscription & Prise en charge</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/formations">Formation</a></li>
+          <li class="current">Inscription</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <section id="inscription" class="contact section">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-5">
+          <div class="info-item d-flex flex-column" data-aos="fade-up" data-aos-delay="200" style="height: 100%; align-items: flex-start; text-align: left; padding: 30px; border-radius: 10px; background: #f9f9f9;">
+            <div class="d-flex align-items-center mb-3">
+               <i class="bi bi-shield-check" style="font-size: 32px; color: var(--accent-color); margin-right: 15px;"></i>
+               <h3 class="mb-0">Partenariat PsyHainaut</h3>
+            </div>
+            <p class="mb-4">Cette formation est éligible au remboursement via <strong>PsyHainaut</strong>. Pour valider votre dossier de prise en charge, votre numéro NISS est requis.</p>
+            
+            <hr class="w-100" style="opacity: 0.1;">
+
+            <h4 class="mt-2" style="font-size: 18px; font-weight: 700;">Détail du parcours :</h4>
+            <ul class="list-unstyled mb-4" style="line-height: 1.8; font-size: 15px;">
+              {modules.map((mod) => (
+                <li class="d-flex align-items-start mb-2">
+                  <i class="bi bi-check2-circle" style="color: var(--accent-color); margin-right: 10px; font-size: 18px;"></i> 
+                  <span>{mod}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mt-auto p-3 w-100" style="background: rgba(var(--accent-color-rgb), 0.08); border-radius: 8px; border-left: 4px solid var(--accent-color);">
+              <p class="mb-0" style="font-size: 14px; color: #444;">
+                <i class="bi bi-info-circle me-2"></i> 
+                <strong>Note :</strong> Une fois le formulaire rempli, vous recevrez les instructions pour le paiement et le remboursement.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="form-wrapper" style="background: #fff; padding: 30px; border: 1px solid #eee; border-radius: 10px;">
+            
+            <div class="mb-4 text-center text-md-start">
+              <h3 style="font-weight: 700;">Formulaire d'inscription</h3>
+              <p class="text-muted">Remplissez ces informations pour réserver votre place.</p>
+            </div>
+
+            <form id="registrationForm" class="registration-form">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label class="form-label fw-bold small">Nom et Prénom</label>
+                  <input type="text" name="name" class="form-control custom-input" placeholder="Ex: Jean Dupont" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-bold small">Email</label>
+                  <input type="email" name="email" class="form-control custom-input" placeholder="Ex: jean@email.be" required>
+                </div>
+
+                <div class="col-md-12">
+                  <label class="form-label fw-bold small">Numéro NISS (Registre National)</label>
+                  <input type="text" name="niss" class="form-control custom-input" placeholder="00.00.00-000.00" required>
+                  <div class="form-text" style="font-size: 12px;">Nécessaire pour le remboursement PsyHainaut.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-bold small">Téléphone</label>
+                  <input type="tel" name="phone" class="form-control custom-input" placeholder="Ex: 0470 00 00 00" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-bold small">Vous êtes...</label>
+                  <select name="status" class="form-select custom-input" required>
+                    <option value="" disabled selected>Sélectionnez votre profil</option>
+                    <option value="particulier">Un particulier</option>
+                    <option value="independant">Un indépendant</option>
+                    <option value="entreprise">Une entreprise / salarié</option>
+                  </select>
+                </div>
+
+                <div class="col-md-12">
+                  <label class="form-label fw-bold small">Attentes ou questions (Optionnel)</label>
+                  <textarea name="message" class="form-control custom-input" rows="4" placeholder="Qu'attendez-vous de cette formation ?"></textarea>
+                </div>
+
+                <div class="col-md-12 text-center mt-4">
+                  <div id="formStatus" style="display:none; padding: 15px; margin-bottom: 20px; border-radius: 5px; font-weight: 500;"></div>
+                  
+                  <button type="submit" id="submitBtn" class="btn-submit">Valider mon inscription</button>
+                  
+                  <p class="mt-3 mb-0" style="font-size: 12px; color: #888;">
+                    <i class="bi bi-lock-fill me-1"></i> Vos données sont chiffrées et protégées (RGPD).
+                  </p>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</Master>
+
+<style>
+  /* Styles personnalisés pour le formulaire */
+  .custom-input {
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    transition: all 0.3s ease;
+  }
+  .custom-input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(var(--accent-color-rgb), 0.1);
+    outline: none;
+  }
+  .btn-submit {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: 0.3s;
+    cursor: pointer;
+    width: 100%;
+  }
+  .btn-submit:hover {
+    background: color-mix(in srgb, var(--accent-color), black 15%);
+    transform: translateY(-2px);
+  }
+  .btn-submit:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+</style>
+
+<script is:inline>
+  // --- CONFIGURATION ---
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwsH_87Ruj4h5Q-fXe_2aPibJzeP3GcDpRhGWLezJQ1oHi5IRiBJ2kx4FhCOw2IwHh8yg/exec'; 
+  // ---------------------
+
+  const form = document.getElementById('registrationForm');
+  const statusBox = document.getElementById('formStatus');
+  const btn = document.getElementById('submitBtn');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    
+    // Désactiver le bouton pour éviter les doubles clics
+    btn.disabled = true;
+    btn.innerText = "Envoi en cours...";
+    
+    // Afficher le status
+    statusBox.style.display = "block";
+    statusBox.style.backgroundColor = "#e7f3ff";
+    statusBox.style.color = "#004085";
+    statusBox.innerText = "Connexion au serveur d'inscription...";
+
+    // Envoyer les données
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        btn.disabled = false;
+        btn.innerText = "Valider mon inscription";
+        
+        // Succès
+        statusBox.style.backgroundColor = "#d4edda";
+        statusBox.style.color = "#155724";
+        statusBox.innerHTML = "<i class='bi bi-check-circle-fill me-2'></i> Inscription réussie ! Je vous recontacte très vite.";
+        
+        form.reset(); // Vider le formulaire
+      })
+      .catch(error => {
+        btn.disabled = false;
+        btn.innerText = "Réessayer";
+        
+        // Erreur
+        statusBox.style.backgroundColor = "#f8d7da";
+        statusBox.style.color = "#721c24";
+        statusBox.innerText = "Erreur lors de l'envoi. Merci de réessayer plus tard.";
+        console.error('Error!', error.message);
+      });
+  });
+</script>

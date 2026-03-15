@@ -1,0 +1,78 @@
+---
+import Master from '../layouts/Master.astro';
+---
+
+<Master title="Contact | StressLess" bodyClass="contact-page">
+
+  <div class="page-title dark-background" data-aos="fade" style="background-image: url(/assets/img/contact-page-title-bg.jpg);">
+    <div class="container">
+      <h1>Contact</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="/">Accueil</a></li>
+          <li class="current">Contact</li>
+        </ol>
+      </nav>
+    </div>
+  </div><section id="contact" class="contact section">
+
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-5">
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi-geo-alt flex-shrink-0"></i>
+            <div>
+              <h3>Adresse</h3>
+              <p>Ton adresse, 7100 La Louvière, Belgique</p>
+            </div>
+          </div><div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-telephone flex-shrink-0"></i>
+            <div>
+              <h3>Appelez-moi</h3>
+              <p>+32 000 00 00 00</p>
+            </div>
+          </div><div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <i class="bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h3>Email</h3>
+              <p>contact@stressless.be</p>
+            </div>
+          </div></div>
+
+        <div class="col-lg-7">
+          <form action="#" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
+            <div class="row gy-4">
+
+              <div class="col-md-6">
+                <input type="text" name="name" class="form-control" placeholder="Votre Nom" required="">
+              </div>
+
+              <div class="col-md-6 ">
+                <input type="email" class="form-control" name="email" placeholder="Votre Email" required="">
+              </div>
+
+              <div class="col-md-12">
+                <input type="text" class="form-control" name="subject" placeholder="Sujet" required="">
+              </div>
+
+              <div class="col-md-12">
+                <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+              </div>
+
+              <div class="col-md-12 text-center">
+                <div class="loading">Chargement...</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Votre message a été envoyé. Merci !</div>
+
+                <button type="submit">Envoyer</button>
+              </div>
+
+            </div>
+          </form>
+        </div></div>
+
+    </div>
+
+  </section></Master>

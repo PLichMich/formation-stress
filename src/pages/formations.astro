@@ -1,0 +1,97 @@
+---
+import Master from '../layouts/Master.astro';
+
+const modules = [
+  {
+    num: "01",
+    title: "Comprendre les mécanismes du stress",
+    desc: "Identifier les déclencheurs biologiques et psychologiques pour mieux les anticiper.",
+    icon: "bi-brain"
+  },
+  {
+    num: "02",
+    title: "La respiration & Cohérence Cardiaque",
+    desc: "Techniques immédiates pour calmer le système nerveux en moins de 3 minutes.",
+    icon: "bi-wind"
+  },
+  {
+    num: "03",
+    title: "Sommeil et récupération",
+    desc: "Optimiser ses cycles de repos pour restaurer son énergie durablement.",
+    icon: "bi-moon-stars"
+  },
+  {
+    num: "04",
+    title: "Gestion de la charge mentale",
+    desc: "Outils d'organisation et de lâcher-prise pour éviter la saturation.",
+    icon: "bi-list-check"
+  },
+  {
+    num: "05",
+    title: "Votre routine sur mesure",
+    desc: "Ancrer ces nouvelles habitudes dans votre quotidien réel pour des résultats à vie.",
+    icon: "bi-calendar-heart"
+  }
+];
+---
+
+<Master title="La Formation StressLess | StressLess" bodyClass="services-page">
+
+  <div class="page-title dark-background" data-aos="fade" style="background-image: url(/assets/img/services-page-title-bg.jpg);">
+    <div class="container">
+      <h1>Parcours de Formation StressLess</h1>
+      <p>Un accompagnement complet en 5 modules pour reprendre le contrôle sur votre stress.</p>
+    </div>
+  </div>
+
+  <section id="featured-services" class="featured-services section">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-12" data-aos="fade-up">
+          <div class="service-item d-flex p-5" style="background: var(--surface-color); border: 1px solid #eee; border-radius: 10px;">
+            <div class="content">
+              <span class="badge bg-primary mb-3">Formation Signature</span>
+              <h2>Maîtriser son stress : Le programme complet</h2>
+              <p>Ce parcours n'est pas une simple suite de conseils, c'est une transformation profonde. Sur plusieurs semaines, nous explorons chaque facette de votre équilibre pour construire une résilience durable.</p>
+              <div class="mt-4">
+                <a href="/inscription" class="btn btn-primary btn-lg">S'inscrire à la prochaine session</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="service-cards" class="service-cards section">
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Les 5 Modules du Programme</h2>
+    </div>
+
+    <div class="container">
+      <div class="row gy-4">
+        {modules.map((m) => (
+          <div class="col-lg-4" data-aos="fade-up">
+            <div class="card-item" style="padding: 30px; border-radius: 15px; background: #fff; box-shadow: 0px 5px 20px rgba(0,0,0,0.05); height: 100%;">
+              <div class="d-flex align-items-center mb-3">
+                <span style="font-size: 40px; font-weight: 800; color: rgba(0,0,0,0.05); margin-right: 15px;">{m.num}</span>
+                <i class={`bi ${m.icon}`} style="font-size: 24px; color: var(--accent-color);"></i>
+              </div>
+              <h4>{m.title}</h4>
+              <p style="font-size: 14px; color: #666;">{m.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="call-to-action section accent-background mt-5">
+    <div class="container text-center" data-aos="zoom-in">
+      <h3>Prêt à transformer votre quotidien ?</h3>
+      <p>Places limitées par session pour garantir un suivi personnalisé de chaque participant.</p>
+      <a class="cta-btn" href="/inscription">Réserver ma place maintenant</a>
+    </div>
+  </section>
+
+</Master>
