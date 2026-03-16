@@ -1,5 +1,5 @@
 ---
-import Master from '../layouts/Master.astro';
+import Master from '../../../../layouts/Master.astro';
 
 // Liste des modules pour le rappel à gauche
 const modules = [
@@ -31,34 +31,61 @@ const modules = [
 
       <div class="row gy-4">
 
-        <div class="col-lg-5">
-          <div class="info-item d-flex flex-column" data-aos="fade-up" data-aos-delay="200" style="height: 100%; align-items: flex-start; text-align: left; padding: 30px; border-radius: 10px; background: #f9f9f9;">
-            <div class="d-flex align-items-center mb-3">
-               <i class="bi bi-shield-check" style="font-size: 32px; color: var(--accent-color); margin-right: 15px;"></i>
-               <h3 class="mb-0">Partenariat PsyHainaut</h3>
-            </div>
-            <p class="mb-4">Cette formation est éligible au remboursement via <strong>PsyHainaut</strong>. Pour valider votre dossier de prise en charge, votre numéro NISS est requis.</p>
-            
-            <hr class="w-100" style="opacity: 0.1;">
+<div class="col-lg-5">
+  <div class="info-item d-flex flex-column" data-aos="fade-up" data-aos-delay="200" style="height: 100%; align-items: flex-start; text-align: left; padding: 30px; border-radius: 10px; background: #f9f9f9;">
+    
+    <div class="mb-4 w-100">
+      <div class="d-flex align-items-center mb-3">
+        <i class="bi bi-geo-alt" style="font-size: 24px; color: var(--accent-color); margin-right: 15px;"></i>
+        <h4 class="mb-0" style="font-size: 18px; font-weight: 700;">Lieu de la session</h4>
+      </div>
+      <p class="ms-5 text-muted" style="font-size: 15px;">
+        <strong>Houdeng-Gœgnies</strong> (La Louvière)<br>
+<a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Rue+Jeanne+Haye+35,+7110+La+Louvière" class="text-decoration-none">
+  Rue Jeanne Haye n°35, 7110 Houdeng-Aimeries
+</a>
+      </p>
+    </div>
 
-            <h4 class="mt-2" style="font-size: 18px; font-weight: 700;">Détail du parcours :</h4>
-            <ul class="list-unstyled mb-4" style="line-height: 1.8; font-size: 15px;">
-              {modules.map((mod) => (
-                <li class="d-flex align-items-start mb-2">
-                  <i class="bi bi-check2-circle" style="color: var(--accent-color); margin-right: 10px; font-size: 18px;"></i> 
-                  <span>{mod}</span>
-                </li>
-              ))}
-            </ul>
+    <div class="mb-4 w-100">
+      <div class="d-flex align-items-center mb-3">
+        <i class="bi bi-people" style="font-size: 24px; color: var(--accent-color); margin-right: 15px;"></i>
+        <h4 class="mb-0" style="font-size: 18px; font-weight: 700;">Vos formateurs</h4>
+      </div>
+      <p class="ms-5 text-muted" style="font-size: 15px;">
+        <strong>David Vandenbosch</strong> & <strong>Michaël Plichart</strong>.<br>
+        Un duo d'experts en TCC et physiologie du stress.
+      </p>
+    </div>
 
-            <div class="mt-auto p-3 w-100" style="background: rgba(var(--accent-color-rgb), 0.08); border-radius: 8px; border-left: 4px solid var(--accent-color);">
-              <p class="mb-0" style="font-size: 14px; color: #444;">
-                <i class="bi bi-info-circle me-2"></i> 
-                <strong>Note :</strong> Une fois le formulaire rempli, vous recevrez les instructions pour le paiement et le remboursement.
-              </p>
-            </div>
-          </div>
-        </div>
+    <hr class="w-100" style="opacity: 0.1;">
+
+    <div class="d-flex align-items-center mb-3">
+       <i class="bi bi-shield-check" style="font-size: 32px; color: var(--accent-color); margin-right: 15px;"></i>
+       <h3 class="mb-0">Prise en charge</h3>
+    </div>
+    <p class="mb-4">Cette formation est éligible au remboursement via <strong>PsyHainaut</strong>. Pour valider votre dossier, votre numéro NISS est requis.</p>
+    
+    <hr class="w-100" style="opacity: 0.1;">
+
+    <h4 class="mt-2" style="font-size: 18px; font-weight: 700;">Détail du parcours :</h4>
+    <ul class="list-unstyled mb-4" style="line-height: 1.8; font-size: 15px;">
+      {modules.map((mod) => (
+        <li class="d-flex align-items-start mb-2">
+          <i class="bi bi-check2-circle" style="color: var(--accent-color); margin-right: 10px; font-size: 18px;"></i> 
+          <span>{mod}</span>
+        </li>
+      ))}
+    </ul>
+
+    <div class="mt-auto p-3 w-100" style="background: rgba(var(--accent-color-rgb), 0.08); border-radius: 8px; border-left: 4px solid var(--accent-color);">
+      <p class="mb-0" style="font-size: 14px; color: #444;">
+        <i class="bi bi-info-circle me-2"></i> 
+        <strong>Note :</strong> Une fois le formulaire rempli, vous recevrez les instructions pour le paiement.
+      </p>
+    </div>
+  </div>
+</div>
 
         <div class="col-lg-7">
           <div class="form-wrapper" style="background: #fff; padding: 30px; border: 1px solid #eee; border-radius: 10px;">

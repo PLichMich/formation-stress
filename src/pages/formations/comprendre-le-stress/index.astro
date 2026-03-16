@@ -1,0 +1,176 @@
+---
+import Master from '../../../layouts/Master.astro';
+
+const objectifs = [
+  "Maîtriser les outils d'apaisement immédiat (Cohérence cardiaque, Jacobson, Pleine conscience)",
+  "Comprendre la genèse biologique et psychologique de votre stress",
+  "Identifier les freins concrets qui vous empêchent d'appliquer ces solutions",
+  "Renforcer votre autonomie pour devenir votre propre coach au quotidien"
+];
+
+const modules = [
+  { id: 1, title: "Physiologie : La genèse du stress", slug: "mecanismes-du-stress" },
+  { id: 2, title: "Outils : Cohérence & Relaxation", slug: "coherence-cardiaque" },
+  { id: 3, title: "Sommeil : La clef de la récupération", slug: "sommeil-recuperation" },
+  { id: 4, title: "Cognition : Identifier les freins", slug: "charge-mentale" },
+  { id: 5, title: "Action : Devenir autonome", slug: "routine-personnalisee" }
+];
+---
+
+<Master title="Programme : Comprendre le Stress | StressAction">
+  <main class="main">
+
+    <section class="hero-page d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          
+          <div class="col-lg-6" data-aos="fade-right">
+            <span class="badge mb-3" style="background: rgba(111, 66, 193, 0.1); color: #6f42c1; border-radius: 50px; padding: 8px 18px; border: 1px solid rgba(111, 66, 193, 0.2);">Formation Phare</span>
+            <h1 class="display-4 fw-bold mb-4" style="color: #1a0b33; line-height: 1.1;">Apprendre à pêcher sa propre sérénité</h1>
+            <p class="fs-5 text-muted mb-5">
+                Une formation TCC/ACT intensive pour ne plus subir votre stress, mais pour comprendre et maîtriser les outils concrets de votre apaisement.
+            </p>
+            <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                <a href="#programme" class="btn btn-primary btn-lg px-4 py-3 fw-bold rounded-pill">Voir le programme</a>
+                <a href="#objectifs" class="btn btn-outline-secondary btn-lg px-4 py-3 fw-bold rounded-pill">Objectifs pédagogiques</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="hero-image-wrapper p-3 bg-white shadow-lg rounded-4">
+                <img src="/assets/img/hero-formation-comprendre.png" alt="Philosophie de sérénité et d'autonomie StressAction (image_0.png)" class="img-fluid rounded-3">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="objectifs" class="py-5 bg-white">
+      <div class="container py-4">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <h2 class="fw-bold mb-4" style="color: #341f97;">Une démarche scientifique et pratique</h2>
+            <p class="fs-5 text-muted italic">
+                "Donnez un poisson à un homme, il mangera un jour. Apprenez-lui à pêcher, il mangera toute sa vie."
+            </p>
+            <p>
+                Cette formation n'est pas une simple série de conseils de relaxation. C'est un parcours structuré qui combine la **neuro-physiologie** et les **TCC** pour vous donner une autonomie totale face à vos émotions.
+            </p>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="objectifs-box p-4 rounded-4" style="background: #fdfcfa; border-left: 5px solid #6f42c1; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
+                <h4 class="fw-bold mb-3">Synthèse PsyHainaut :</h4>
+                <ul class="list-unstyled mb-0">
+                    {objectifs.map(obj => (
+                        <li class="mb-3 d-flex align-items-start text-dark">
+                            <i class="bi bi-check-circle-fill me-3" style="color: #6f42c1;"></i>
+                            <span>{obj}</span>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="programme" class="py-5 bg-light">
+        <div class="container text-center mb-5">
+            <h2 class="fw-bold">Le parcours détaillé</h2>
+            <div class="divider mx-auto"></div>
+        </div>
+        <div class="container">
+            <div class="row g-4">
+                {modules.map((mod) => (
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+                        <div class="card h-100 border-0 shadow-sm p-4 text-center hover-card">
+                            <div class="module-number mx-auto mb-3">{mod.id}</div>
+                            <h5 class="fw-bold">{mod.title}</h5>
+                            <a href={`/formations/comprendre-le-stress/programme/${mod.slug}`} class="stretched-link text-decoration-none text-primary mt-3 d-block small fw-bold">Détails du module →</a>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <h3>Prochaine session à Houdeng</h3>
+            <p class="opacity-75 mb-4">Mars 2026 - Rue Jeanne Haye n°35</p>
+            <a href="/formations/comprendre-le-stress/sessions/mars-2026-houdeng-dv" class="btn btn-primary btn-lg px-5">M'inscrire maintenant</a>
+        </div>
+    </section>
+
+  </main>
+</Master>
+
+<style>
+/* Fixer la Navbar dès le départ */
+  :global(#header) {
+    background: #1a0b33 !important; /* Couleur sombre solide */
+  }
+
+  /* Hero Section : Un dégradé "Inversé" et marqué */
+  .hero-page {
+    padding-top: 140px;
+    padding-bottom: 80px;
+    min-height: 85vh;
+    /* Un dégradé inversé : il part d'un violet plus soutenu en haut pour aller vers le clair.
+       Cela crée une transition claire avec le reste. */
+    background: linear-gradient(180deg, rgba(111, 66, 193, 0.05) 0%, #fffbf2 100%);
+    border-bottom: 1px solid rgba(111, 66, 193, 0.1);
+  }
+
+  .hero-image-wrapper {
+    /* L'ombre est plus marquée pour l'essai 2 */
+    box-shadow: 0 15px 40px rgba(111, 66, 193, 0.1);
+  }
+
+  /* Style des boutons pour l'essai 2 */
+  .btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+  }
+  .btn-outline-secondary {
+    color: #6f42c1;
+    border-color: #6f42c1;
+  }
+  .btn-outline-secondary:hover {
+    background-color: #6f42c1;
+    color: white;
+  }
+
+  .module-number {
+    width: 50px;
+    height: 50px;
+    background: #6f42c1;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .hover-card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    background: #fff;
+  }
+  .hover-card:hover {
+    transform: translateY(-10px);
+    background: #6f42c1;
+    color: white;
+  }
+  .hover-card:hover a { color: white !important; }
+
+  .divider {
+    width: 60px;
+    height: 4px;
+    background: #6f42c1;
+    border-radius: 2px;
+  }
+</style>

@@ -5,8 +5,7 @@ const currentPath = pathname.replace(/\/$/, "") || "/";
 
 const navItems = [
   { name: 'Accueil', href: '/' },
-  { name: 'Professionnels', href: '/professionnels' },
-  { name: 'Formation', href: '/formations' }, // Mis au singulier car tu as "LA" formation StressLess
+  { name: 'Formation', href: '/formations' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
 ];
@@ -15,31 +14,40 @@ const navItems = [
 <header id="header" class="header d-flex align-items-center fixed-top">
   <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-    <a href="/" class="logo d-flex align-items-center">
-      <img src="/assets/img/logo-stressless.png" alt="Logo StressLess" id="logo-img">
+    <a href="/" class="logo d-flex align-items-center text-decoration-none">
+      <span class="logo-text-stress">Stress</span><span class="logo-text-action">Action</span>
     </a>
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        {navItems.map((item) => (
+        {navItems.slice(0, 2).map((item) => ( // Accueil et Formation
           <li>
-            <a 
-              href={item.href} 
-              class={currentPath === item.href ? 'active' : ''}
-            >
+            <a href={item.href} class={currentPath === item.href ? 'active' : ''}>
               {item.name}
             </a>
           </li>
         ))}
 
         <li class="dropdown">
-          <a href="#"><span>Ressources</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <a href="/professionnels" class={currentPath.includes('equipe') || currentPath === '/professionnels' ? 'active' : ''}>
+            <span>L'Équipe</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
+          </a>
           <ul>
-            <li><a href="#">Exercices Respiration</a></li>
-            <li><a href="#">Tests de Stress</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="/professionnels">Tous les experts</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a href="/equipe/michael">Michaël</a></li>
+            <li><a href="/equipe/david-vandenbosch">David Vandenbosch</a></li>
+            <li><a href="/equipe/celine-mahieu">Céline Mahieu</a></li>
           </ul>
         </li>
+
+        {navItems.slice(2).map((item) => ( // Blog et Contact
+          <li>
+            <a href={item.href} class={currentPath === item.href ? 'active' : ''}>
+              {item.name}
+            </a>
+          </li>
+        ))}
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>
@@ -48,21 +56,38 @@ const navItems = [
 </header>
 
 <style>
-  /* Style pour le logo */
-  #logo-img {
-    height: 35px;
+  /* STYLES DU LOGO TEXTUEL */
+  .logo-text-stress {
+    font-size: 24px;
+    font-weight: 700;
+    color: #444; /* Gris foncé pour le stress (calme) */
     transition: all 0.3s ease;
   }
 
-  /* Sur les pages avec Hero sombre, le logo doit être blanc */
-  .index-page #header:not(.scrolled) #logo-img,
-  .blog-page #header:not(.scrolled) #logo-img,
-  .contact-page #header:not(.scrolled) #logo-img {
-    filter: brightness(0) invert(1);
+  .logo-text-action {
+    font-size: 24px;
+    font-weight: 800;
+    color: #6f42c1; /* Ton violet signature pour l'action (vibrant) */
+    transition: all 0.3s ease;
   }
 
-  /* Quand on scrolle ou sur les pages claires, le logo reprend ses couleurs */
-  :global(.scrolled) #logo-img {
-    filter: none !important;
+  /* Gestion du logo sur les pages à fond sombre (Hero) */
+  :global(.index-page) #header:not(.scrolled) .logo-text-stress,
+  :global(.index-page) #header:not(.scrolled) .logo-text-action,
+  :global(.professionnels-page) #header:not(.scrolled) .logo-text-stress,
+  :global(.professionnels-page) #header:not(.scrolled) .logo-text-action,
+  :global(.equipe-page) #header:not(.scrolled) .logo-text-stress,
+  :global(.equipe-page) #header:not(.scrolled) .logo-text-action,
+  :global(.contact-page) #header:not(.scrolled) .logo-text-stress,
+  :global(.contact-page) #header:not(.scrolled) .logo-text-action {
+    color: #ffffff !important; /* Tout le texte devient blanc */
+  }
+
+  /* Quand on scrolle, le logo reprend ses couleurs sur fond blanc */
+  :global(.scrolled) .logo-text-stress {
+    color: #444 !important;
+  }
+  :global(.scrolled) .logo-text-action {
+    color: #6f42c1 !important;
   }
 </style>
