@@ -1,0 +1,114 @@
+---
+import Master from '../../layouts/Master.astro';
+---
+
+<Master title="Céline Mahieu - Psychologue TCC | StressAction">
+  <main class="main">
+
+    <section class="profile-header section">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-4 text-center">
+            <div class="photo-wrapper">
+                <img src="/assets/img/team/celine-mahieu.jpg" alt="Céline Mahieu" class="img-fluid rounded-circle profile-img">
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <span class="badge mb-3 py-2 px-3" style="background-color: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4);">Intervenante Experte</span>
+            <h1>Céline Mahieu</h1>
+            <p class="lead">
+                Psychologue clinicienne spécialisée en Thérapies Cognitivo-Comportementales (TCC), experte en gestion des émotions et de la douleur.
+            </p>
+            <div class="mt-4">
+              <a href="https://www.centrelesoranges.be" target="_blank" class="btn btn-light fw-bold px-4 me-2">Centre Les Oranges</a>
+              <a href="/contact" class="btn btn-outline-light px-4">Prendre rendez-vous</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bio section bg-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2 class="mb-4" style="color: #341f97;">Son Approche</h2>
+            <p>
+              Céline Mahieu apporte à <strong>StressAction</strong> une vision clinique pragmatique et humaine. Spécialisée dans l'accompagnement des adultes et des couples, elle utilise les outils de la troisième vague des TCC pour aider à traverser les moments de crise et de souffrance psychique.
+            </p>
+            <p>
+              Sa pratique au sein du <em>Centre Thérapeutique Les Oranges</em> lui permet d'être au plus proche des réalités du terrain, notamment dans la gestion du stress aigu et des problématiques de burnout.
+            </p>
+            
+            <h3 class="mt-5" style="color: #8e44ad;">Domaines d'Intervention</h3>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i> Gestion du stress et de l'anxiété</li>
+                        <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i> Traitement de la dépression</li>
+                        <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i> Prévention du Burnout</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i> Gestion des émotions</li>
+                        <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i> Traitement de la douleur</li>
+                        <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i> Problématiques de couple</li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card border-0 shadow p-4 mt-4 mt-lg-0" style="border-radius: 15px;">
+              <h4 class="mb-3">Informations Pratiques</h4>
+              <p class="small text-muted">Céline intervient lors des modules de formation sur la régulation émotionnelle et les obstacles au changement.</p>
+              <hr>
+              <div class="info-item mb-3">
+                <p class="fw-bold mb-0">Langues :</p>
+                <p>Français, Anglais, Italien</p>
+              </div>
+              <div class="cta-mini">
+                <a href="/formation" class="btn btn-primary w-100 py-2">Découvrir sa formation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Master>
+
+<style>
+  /* On réutilise tes styles percutants */
+  :global(#header) {
+    background: #1a0b33 !important;
+    padding: 15px 0 !important;
+  }
+
+  .profile-header {
+    padding: 160px 0 100px 0;
+    background: linear-gradient(135deg, #8e44ad 0%, #341f97 100%);
+    position: relative;
+  }
+
+  h1 { 
+    color: #ffffff !important; 
+    font-weight: 800 !important;
+    font-size: 3.8rem;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    letter-spacing: -1.5px;
+  }
+
+  .lead {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-weight: 500;
+  }
+
+  .profile-img {
+    max-width: 280px;
+    border: 8px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  }
+</style>

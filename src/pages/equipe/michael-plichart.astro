@@ -1,0 +1,111 @@
+---
+import Master from '../../layouts/Master.astro';
+---
+
+<Master title="Michaël - Fondateur & Formateur | StressAction">
+  <main class="main">
+
+    <section class="profile-header section">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-4 text-center">
+            <div class="photo-wrapper">
+                <img src="/assets/img/team/michael-plichart.jpg" alt="Michaël" class="img-fluid rounded-circle profile-img">
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <span class="badge mb-3 py-2 px-3" style="background-color: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4);">Fondateur de StressAction</span>
+            <h1>Michaël</h1>
+            <p class="lead">
+                Spécialiste de la physiologie du stress et des TCC. Ma mission : vous apprendre à "pêcher" votre propre sérénité grâce à la science.
+            </p>
+            <div class="mt-4">
+              <a href="#parcours" class="btn btn-light fw-bold px-4 me-2">Mon Approche</a>
+              <a href="/contact" class="btn btn-outline-light px-4">Me contacter</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="parcours" class="bio section bg-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2 class="mb-4" style="color: #341f97;">"Donnez un poisson à un homme..."</h2>
+            <p class="fs-5 italic text-muted mb-4">
+                <em>« Si tu donnes un poisson à un homme, il mangera un jour. Si tu lui apprends à pêcher, il mangera toujours. »</em>
+            </p>
+            <p>
+                C'est cette philosophie qui anime chaque module de <strong>StressAction</strong>. Après des années à étudier la physiologie humaine et les mécanismes du stress, j'ai compris que la clé de la résilience ne résidait pas dans des solutions "clés en main", mais dans la compréhension profonde de notre propre fonctionnement.
+            </p>
+            <p>
+                Mon approche combine la rigueur des <strong>Thérapies Cognitives et Comportementales (TCC)</strong> avec une explication claire des processus biologiques (système nerveux autonome, cortisol, variabilité cardiaque).
+            </p>
+            
+            <h3 class="mt-5" style="color: #8e44ad;">Pourquoi travailler avec moi ?</h3>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <div class="p-3 border-start border-4 border-primary bg-light mb-3">
+                        <h5 class="fw-bold">Vulgarisation Scientifique</h5>
+                        <p class="small mb-0">Je traduis les neurosciences complexes en outils concrets et actionnables au quotidien.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-3 border-start border-4 border-primary bg-light mb-3">
+                        <h5 class="fw-bold">Autonomie Complète</h5>
+                        <p class="small mb-0">Je ne suis pas là pour vous porter, mais pour vous donner la boussole et la canne à pêche.</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card border-0 shadow-lg p-4 mt-4 mt-lg-0 text-white" style="background: #341f97; border-radius: 20px;">
+              <h4 class="mb-3">En quelques chiffres</h4>
+              <div class="mb-3">
+                <span class="display-6 fw-bold">5</span>
+                <p>Sessions intensives pour transformer votre gestion du stress.</p>
+              </div>
+              <div class="mb-3">
+                <span class="display-6 fw-bold">100%</span>
+                <p>Basé sur des preuves scientifiques (Evidence-Based).</p>
+              </div>
+              <hr class="bg-white">
+              <p class="small">Disponible pour des formations en entreprise et des suivis individuels à La Louvière et environs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Master>
+
+<style>
+  /* On conserve la structure visuelle forte */
+  :global(#header) {
+    background: #1a0b33 !important;
+    padding: 15px 0 !important;
+  }
+
+  .profile-header {
+    padding: 160px 0 100px 0;
+    background: linear-gradient(135deg, #8e44ad 0%, #341f97 100%);
+    position: relative;
+  }
+
+  h1 { 
+    color: #ffffff !important; 
+    font-weight: 800 !important;
+    font-size: 3.8rem;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    letter-spacing: -1.5px;
+  }
+
+  .profile-img {
+    max-width: 280px;
+    border: 8px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  }
+</style>

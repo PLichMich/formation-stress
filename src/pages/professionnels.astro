@@ -2,32 +2,105 @@
 import Master from '../layouts/Master.astro';
 ---
 
-<Master title="Solutions Entreprises">
-  
-  <section id="hero-pro" class="hero section dark-background" style="padding-top: 120px; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/img/hero-bg.jpg') center/cover;">
-    <div class="container text-center">
-      <h1 data-aos="fade-up">Optimisez la Performance Sociale de votre Entreprise</h1>
-      <p data-aos="fade-up" data-aos-delay="100">Réduisez l'absentéisme et boostez l'engagement grâce à nos formations en gestion du stress.</p>
-    </div>
-  </section>
+<Master title="Nos Intervenants | StressAction">
+  <main class="main">
 
-  <section class="section py-5">
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-lg-6" data-aos="fade-right">
-          <h2>Pourquoi investir dans la gestion du stress ?</h2>
-          <p>Le stress au travail n'est pas qu'une question individuelle, c'est un enjeu de performance collective.</p>
-          <ul>
-            <li><strong>Réduction du turnover :</strong> Des salariés sereins restent plus longtemps.</li>
-            <li><strong>Productivité accrue :</strong> Moins de fatigue, plus de focus.</li>
-            <li><strong>Climat social :</strong> Prévention des risques psychosociaux (RPS).</li>
-          </ul>
-        </div>
-        <div class="col-lg-6" data-aos="fade-left">
-           <img src="/assets/img/working-stress.jpg" class="img-fluid rounded shadow" alt="Gestion du stress en entreprise">
+    <section class="profile-header section">
+      <div class="container text-center" data-aos="fade-up">
+        <h1 class="display-4 fw-bold text-white">Une Équipe d'Experts</h1>
+        <p class="lead text-white opacity-90">Des professionnels reconnus pour une approche scientifique du stress.</p>
+      </div>
+    </section>
+
+    <section class="section py-5 bg-light">
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card member-card h-100 border-0 shadow-sm text-center p-4">
+              <div class="mb-3">
+                <img src="/assets/img/team/michael-plichart.jpg" class="rounded-circle img-fluid shadow-sm" style="width: 150px; height: 150px; object-fit: cover; border: 4px solid #8e44ad;" alt="Michaël">
+              </div>
+              <h3 class="h4 fw-bold">Michaël</h3>
+              <p class="text-primary fw-bold">Fondateur & Formateur</p>
+              <p class="small text-muted">Spécialiste de la physiologie du stress et des TCC.</p>
+              <div class="mt-auto">
+                <a href="/equipe/michael" class="btn btn-outline-primary w-100">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card member-card h-100 border-0 shadow-sm text-center p-4">
+              <div class="mb-3">
+                <img src="/assets/img/team/david-vandenbosch.jpg" class="rounded-circle img-fluid shadow-sm" style="width: 150px; height: 150px; object-fit: cover; border: 4px solid #6f42c1;" alt="David Vandenbosch">
+              </div>
+              <h3 class="h4 fw-bold">David Vandenbosch</h3>
+              <p class="text-primary fw-bold">Psychologue Clinicien</p>
+              <p class="small text-muted">Expert international en thérapie ACT et Mindfulness.</p>
+              <div class="mt-auto">
+                <a href="/equipe/david-vandenbosch" class="btn btn-outline-primary w-100">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card member-card h-100 border-0 shadow-sm text-center p-4">
+              <div class="mb-3">
+                <img src="/assets/img/team/celine-mahieu.jpg" class="rounded-circle img-fluid shadow-sm" style="width: 150px; height: 150px; object-fit: cover; border: 4px solid #341f97;" alt="Céline Mahieu">
+              </div>
+              <h3 class="h4 fw-bold">Céline Mahieu</h3>
+              <p class="text-primary fw-bold">Psychologue TCC</p>
+              <p class="small text-muted">Spécialiste en gestion des émotions et de la douleur.</p>
+              <div class="mt-auto">
+                <a href="/equipe/celine-mahieu" class="btn btn-outline-primary w-100">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+  </main>
 </Master>
+
+<style>
+  /* FIX NAVBAR : On force l'apparition dès le chargement */
+  :global(#header) {
+    background: #1a0b33 !important;
+    padding: 15px 0 !important;
+  }
+
+  /* HERO SECTION : Vibrant Action Style */
+  .profile-header {
+    padding: 160px 0 80px 0;
+    background: linear-gradient(135deg, #8e44ad 0%, #341f97 100%);
+    border-bottom: 5px solid #6f42c1;
+  }
+
+  h1 {
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+
+  /* CARDS STYLES */
+  .member-card {
+    transition: all 0.3s ease;
+    border-radius: 20px;
+    background: #ffffff;
+  }
+  .member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12) !important;
+  }
+  .btn-outline-primary {
+    border-color: #6f42c1;
+    color: #6f42c1;
+    font-weight: 600;
+  }
+  .btn-outline-primary:hover {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+    color: #fff;
+  }
+</style>

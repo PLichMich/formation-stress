@@ -1,0 +1,104 @@
+---
+import Master from '../../layouts/Master.astro';
+---
+
+<Master title="David Vandenbosch - Expert ACT & TCC | StressAction">
+  <main class="main" style="margin-top: 100px;">
+
+<section class="profile-header section">
+  <div class="container" data-aos="fade-up">
+    <div class="row gy-4 align-items-center">
+      <div class="col-lg-4 text-center">
+        <img src="/assets/img/team/david-vandenbosch.jpg" alt="David Vandenbosch" class="img-fluid rounded-circle profile-img">
+      </div>
+      <div class="col-lg-8">
+        <h1 class="david-title">David Vandenbosch</h1>
+        <p class="david-lead">
+            Psychologue clinicien, auteur et formateur international en thérapie ACT et Mindfulness.
+        </p>
+        <div class="mt-4">
+          <a href="#" class="btn btn-primary px-4 me-2">LinkedIn</a>
+          <a href="https://www.act-therapie.com" target="_blank" class="btn btn-outline-light px-4">Site Web</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="bio section bg-light py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2 class="mb-4">Son Parcours</h2>
+            <p>
+              David Vandenbosch est une figure incontournable des thérapies de la troisième vague en Belgique. Diplômé en psychologie clinique, il a dédié sa carrière à l'intégration de la pleine conscience et de l'engagement dans le processus de soin.
+            </p>
+            <p>
+              En tant que coordinateur à la clinique de la gestion du stress et du burn-out (Le Domaine - ULB Erasme), il apporte à <strong>StressAction</strong> une expertise de terrain inégalée sur les mécanismes de l'épuisement professionnel et de l'anxiété.
+            </p>
+            
+            <h3 class="mt-5">Expertises Clés</h3>
+            <ul class="list-group list-group-flush bg-transparent">
+              <li class="list-group-item bg-transparent border-0"><i class="bi bi-check-circle-fill text-primary me-2"></i> Thérapie d'Acceptation et d'Engagement (ACT)</li>
+              <li class="list-group-item bg-transparent border-0"><i class="bi bi-check-circle-fill text-primary me-2"></i> Réduction du stress basée sur la Pleine Conscience (MBSR)</li>
+              <li class="list-group-item bg-transparent border-0"><i class="bi bi-check-circle-fill text-primary me-2"></i> Prévention et traitement du Burn-out</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card border-0 shadow-sm p-4 mt-4 mt-lg-0">
+              <h4 class="mb-3">Publications</h4>
+              <p class="small text-muted">Auteur de plusieurs ouvrages de référence :</p>
+              <ul class="list-unstyled">
+                <li class="mb-2">📖 <em>ACT : La thérapie d'acceptation et d'engagement</em></li>
+                <li class="mb-2">📖 <em>S'initier à l'ACT</em> (Éditions Dunod)</li>
+              </ul>
+              <hr>
+              <div class="cta-mini">
+                <p class="fw-bold mb-2">Envie de suivre sa formation ?</p>
+                <a href="/inscription" class="btn btn-primary w-100">Voir les prochaines dates</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Master>
+
+<style>
+  /* 1. Le Header (Navbar) : On le rend solide et élégant */
+  :global(#header) {
+    background: #1a0b33 !important; /* Un bleu nuit profond pour la stabilité */
+    padding: 15px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  /* 2. Le Background Vibrant Action */
+  .profile-header {
+    padding: 160px 0 100px 0; /* On augmente le padding pour laisser respirer le titre */
+    background: linear-gradient(135deg, #8e44ad 0%, #341f97 100%);
+    position: relative;
+  }
+
+  /* 3. Le Titre H1 : Blanc, gras et percutant */
+  h1 { 
+    color: #ffffff !important; 
+    font-weight: 800 !important;
+    font-size: 3.8rem; /* Plus grand pour l'impact */
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombre pour détacher le texte */
+    letter-spacing: -1.5px; /* Look plus moderne et compact */
+    margin-bottom: 1rem;
+  }
+
+  /* 4. Le Sous-titre (Lead) */
+  .lead {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-weight: 500;
+    font-size: 1.3rem;
+    max-width: 750px;
+    line-height: 1.6;
+  }
+</style>
