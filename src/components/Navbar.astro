@@ -1,14 +1,6 @@
 ---
-// src/components/Navbar.astro
 const pathname = new URL(Astro.url).pathname;
 const currentPath = pathname.replace(/\/$/, "") || "/";
-
-const navItems = [
-  { name: 'Accueil', href: '/' },
-  { name: 'Formation', href: '/formations' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Contact', href: '/contact' },
-];
 ---
 
 <header id="header" class="header d-flex align-items-center fixed-top">
@@ -20,13 +12,20 @@ const navItems = [
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        {navItems.slice(0, 2).map((item) => ( // Accueil et Formation
-          <li>
-            <a href={item.href} class={currentPath === item.href ? 'active' : ''}>
-              {item.name}
-            </a>
-          </li>
-        ))}
+        <li>
+          <a href="/" class={currentPath === '/' ? 'active' : ''}>Accueil</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="/formations" class={currentPath.includes('formations') ? 'active' : ''}>
+            <span>Formations</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
+          </a>
+          <ul>
+            <li><a href="/formations">Toutes nos formations</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a href="/formations/comprendre-le-stress">Comprendre le stress</a></li>
+          </ul>
+        </li>
 
         <li class="dropdown">
           <a href="/professionnels" class={currentPath.includes('equipe') || currentPath === '/professionnels' ? 'active' : ''}>
@@ -35,19 +34,18 @@ const navItems = [
           <ul>
             <li><a href="/professionnels">Tous les experts</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a href="/equipe/michael">Michaël</a></li>
+            <li><a href="/equipe/michael">Michaël Plichart</a></li>
             <li><a href="/equipe/david-vandenbosch">David Vandenbosch</a></li>
             <li><a href="/equipe/celine-mahieu">Céline Mahieu</a></li>
           </ul>
         </li>
 
-        {navItems.slice(2).map((item) => ( // Blog et Contact
-          <li>
-            <a href={item.href} class={currentPath === item.href ? 'active' : ''}>
-              {item.name}
-            </a>
-          </li>
-        ))}
+        <li>
+          <a href="/blog" class={currentPath === '/blog' ? 'active' : ''}>Blog</a>
+        </li>
+        <li>
+          <a href="/contact" class={currentPath === '/contact' ? 'active' : ''}>Contact</a>
+        </li>
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>
@@ -60,27 +58,22 @@ const navItems = [
   .logo-text-stress {
     font-size: 24px;
     font-weight: 700;
-    color: #444; /* Gris foncé pour le stress (calme) */
+    color: #444;
     transition: all 0.3s ease;
   }
 
   .logo-text-action {
     font-size: 24px;
     font-weight: 800;
-    color: #6f42c1; /* Ton violet signature pour l'action (vibrant) */
+    color: #6f42c1;
     transition: all 0.3s ease;
   }
 
-  /* Gestion du logo sur les pages à fond sombre (Hero) */
-  :global(.index-page) #header:not(.scrolled) .logo-text-stress,
-  :global(.index-page) #header:not(.scrolled) .logo-text-action,
-  :global(.professionnels-page) #header:not(.scrolled) .logo-text-stress,
-  :global(.professionnels-page) #header:not(.scrolled) .logo-text-action,
-  :global(.equipe-page) #header:not(.scrolled) .logo-text-stress,
-  :global(.equipe-page) #header:not(.scrolled) .logo-text-action,
-  :global(.contact-page) #header:not(.scrolled) .logo-text-stress,
-  :global(.contact-page) #header:not(.scrolled) .logo-text-action {
-    color: #ffffff !important; /* Tout le texte devient blanc */
+  /* GESTION DU LOGO SUR LES PAGES À FOND SOMBRE */
+  /* On inclut ici les nouvelles pages de formation pour que le logo soit blanc au début */
+  :global(.index-page, .professionnels-page, .equipe-page, .contact-page, .formation-page) #header:not(.scrolled) .logo-text-stress,
+  :global(.index-page, .professionnels-page, .equipe-page, .contact-page, .formation-page) #header:not(.scrolled) .logo-text-action {
+    color: #ffffff !important;
   }
 
   /* Quand on scrolle, le logo reprend ses couleurs sur fond blanc */
@@ -89,5 +82,10 @@ const navItems = [
   }
   :global(.scrolled) .logo-text-action {
     color: #6f42c1 !important;
+  }
+  
+  .dropdown-divider {
+    margin: 5px 0;
+    opacity: 0.1;
   }
 </style>
