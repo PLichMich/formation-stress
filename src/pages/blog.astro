@@ -2,85 +2,79 @@
 import Master from '../layouts/Master.astro';
 import Sidebar from '../components/Sidebar.astro';
 
-const posts = [
-  {
-    title: "Comment calmer son stress en 3 minutes",
-    category: "Respiration",
-    image: "/assets/img/blog/blog-1.jpg",
-    author: "StressLess Admin",
-    date: "14 Mars 2026",
-    url: "/blog/respiration-3-minutes"
-  },
-  {
-    title: "Le burn-out : prévenir plutôt que guérir",
-    category: "Entreprise",
-    image: "/assets/img/blog/blog-2.jpg",
-    author: "Expert Stress",
-    date: "12 Mars 2026",
-    url: "/blog/prevenir-burn-out"
-  },
-  {
-    title: "La cohérence cardiaque au quotidien",
-    category: "Bien-être",
-    image: "/assets/img/blog/blog-3.jpg",
-    author: "StressLess Admin",
-    date: "10 Mars 2026",
-    url: "/blog/coherence-cardiaque"
-  }
-];
+// On garde la structure mais on la vide pour l'instant
+const posts = []; 
 ---
 
-<Master title="Blog | StressLess" bodyClass="blog-page">
+<Master title="Blog | StressAction" bodyClass="blog-page">
 
-  <div class="page-title dark-background" data-aos="fade" style="background-image: url(/assets/img/blog-page-title-bg.jpg);">
-    <div class="container">
-      <h1>Blog</h1>
-      <nav class="breadcrumbs">
-        <ol>
-          <li><a href="/">Accueil</a></li>
-          <li class="current">Blog</li>
+  <div class="page-title dark-background" data-aos="fade" style="background-image: url(/assets/img/blog-page-title-bg.jpg); background-color: #1a0b33; padding: 80px 0;">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold text-white">Le Blog StressAction</h1>
+      <nav class="breadcrumbs d-flex justify-content-center">
+        <ol class="list-unstyled d-flex text-white-50">
+          <li><a href="/" class="text-white-50 text-decoration-none">Accueil</a></li>
+          <li class="mx-2">/</li>
+          <li class="current text-white">Blog</li>
         </ol>
       </nav>
     </div>
   </div>
 
-  <div class="container mt-5">
+  <div class="container mt-5 mb-5">
     <div class="row">
       <div class="col-lg-8">
         <section id="blog-posts" class="blog-posts section">
-          <div class="row gy-4">
+          
+          <div class="text-center py-5 px-4 rounded-4 shadow-sm bg-white border-top border-4" style="border-top-color: #6f42c1 !important;">
+            <div class="mb-4">
+              <i class="bi bi-journal-richtext text-primary" style="font-size: 4rem; opacity: 0.3;"></i>
+            </div>
+            <h2 class="fw-bold mb-3" style="color: #1a0b33;">Nos articles sont en cours de rédaction</h2>
+            <p class="fs-5 text-muted mb-4">
+              Notre équipe d'experts prépare actuellement une série d'articles sur la gestion du stress, les neurosciences et les techniques TCC pour vous accompagner au quotidien.
+            </p>
+            <div class="p-3 bg-light rounded-3 d-inline-block">
+              <p class="mb-0 small fw-bold text-primary">
+                <i class="bi bi-info-circle me-2"></i> Ouverture prévue : Courant 2026
+              </p>
+            </div>
             
-            {posts.map((post) => (
-              <div class="col-lg-6">
-                <article>
-                  <div class="post-img">
-                    <img src={post.image} alt={post.title} class="img-fluid" />
-                  </div>
-
-                  <p class="post-category">{post.category}</p>
-
-                  <h2 class="title">
-                    <a href={post.url}>{post.title}</a>
-                  </h2>
-
-                  <div class="d-flex align-items-center">
-                    <div class="post-meta">
-                      <p class="post-author">{post.author}</p>
-                      <p class="post-date">
-                        <time>{post.date}</time>
-                      </p>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            ))}
-
+            <hr class="my-5 opacity-25">
+            
+            <p class="text-muted">En attendant, vous pouvez déjà consulter nos parcours de formation :</p>
+            <a href="/#courses" class="btn btn-primary rounded-pill px-4 py-2 fw-bold">
+              Découvrir nos formations
+            </a>
           </div>
+
         </section>
       </div>
 
-      <Sidebar recentPosts={posts} />
+      <div class="col-lg-4">
+        <Sidebar recentPosts={posts} />
+      </div>
+      
     </div>
   </div>
 
 </Master>
+
+<style>
+  /* On s'assure que le header est bien visible sur cette page */
+  :global(#header) {
+    background: #1a0b33 !important;
+  }
+
+  .blog-posts {
+    min-height: 400px;
+  }
+
+  /* Style pour le texte de la Sidebar si elle est vide */
+  :global(.sidebar) {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  }
+</style>

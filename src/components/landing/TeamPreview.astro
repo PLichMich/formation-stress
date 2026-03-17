@@ -1,0 +1,90 @@
+---
+// src/components/landing/TeamPreview.astro
+---
+<section id="team-preview" class="team-preview section py-6 bg-light">
+  <div class="container py-4">
+    <div class="row align-items-center justify-content-center text-center">
+      <div class="col-lg-10" data-aos="fade-up">
+        
+        <h2 class="fw-bold mb-4">Une expertise multidisciplinaire</h2>
+        <p class="text-muted fs-5 mb-5 px-md-5">
+          StressAction s'appuie sur le réseau de professionnels du <strong><a href="https://www.centrelesoranges.be/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-primary fw-bold">Centre Thérapeutique Les Oranges</a></strong>. 
+          Une collaboration étroite entre différents corps de métiers pour une prise en charge globale de l'anxiété.
+        </p>
+
+        <div class="row g-4 justify-content-center text-start">
+          
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="expertise-box p-4 bg-white rounded-4 shadow-sm h-100 border border-light">
+              <div class="d-flex align-items-center mb-3">
+                <div class="icon-circle bg-primary-light me-3">
+                  <i class="bi bi-hospital fs-4 text-primary"></i>
+                </div>
+                <h5 class="fw-bold mb-0">Pôle Médical</h5>
+              </div>
+              <p class="small text-muted mb-0">Psychiatres et médecins généralistes veillent à la dimension diagnostique et au suivi de santé global des patients.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="expertise-box p-4 bg-white rounded-4 shadow-sm h-100 border border-light">
+              <div class="d-flex align-items-center mb-3">
+                <div class="icon-circle bg-primary-light me-3">
+                  <i class="bi bi-person-heart fs-4 text-primary"></i>
+                </div>
+                <h5 class="fw-bold mb-0">Accompagnement Psy</h5>
+              </div>
+              <p class="small text-muted mb-0">Psychologues et thérapeutes TCC experts dans le traitement des troubles anxieux, du stress et du burn-out.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="expertise-box p-4 bg-white rounded-4 shadow-sm h-100 border border-light">
+              <div class="d-flex align-items-center mb-3">
+                <div class="icon-circle bg-primary-light me-3">
+                  <i class="bi bi-flower1 fs-4 text-primary"></i>
+                </div>
+                <h5 class="fw-bold mb-0">Bien-être & Corps</h5>
+              </div>
+              <p class="small text-muted mb-0">Sophrologues et praticiens spécialisés dans la régulation du système nerveux et la gestion corporelle du stress.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-5 pt-3" data-aos="fade-up" data-aos-delay="400">
+          <p class="mb-3 text-muted small">En collaboration directe avec l'équipe du Centre Les Oranges.</p>
+          <a href="/professionnels" class="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-bold shadow">
+            Découvrir l'équipe complète <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .team-preview {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  .expertise-box {
+    transition: all 0.3s ease;
+  }
+  .expertise-box:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color) !important;
+  }
+
+  .icon-circle {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: rgba(var(--accent-color-rgb), 0.1);
+  }
+</style>

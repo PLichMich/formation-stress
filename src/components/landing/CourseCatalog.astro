@@ -1,0 +1,71 @@
+---
+// src/components/landing/CourseCatalog.astro
+---
+<section id="courses" class="courses section bg-light py-5">
+  <div class="container">
+    <div class="section-title text-center mb-5" data-aos="fade-up">
+      <h2 class="fw-bold">Nos Parcours de Soin & Formations</h2>
+      <p class="text-muted">Des protocoles structurés basés sur les thérapies cognitives et comportementales.</p>
+    </div>
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="course-card shadow-sm rounded-4 overflow-hidden bg-white h-100 border-0">
+          <div class="course-badge px-3 py-1 bg-primary text-white position-absolute mt-3 ms-3 rounded-pill small">Disponible</div>
+          
+          <svg class="img-fluid" width="100%" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100%" height="100%" fill="#a29bfe"/>
+            <circle cx="200" cy="100" r="80" fill="#6c5ce7" opacity="0.5"/>
+            <circle cx="200" cy="100" r="50" fill="#6c5ce7"/>
+            <path d="M150 150 L250 150 L200 50 Z" fill="#fff" opacity="0.8"/>
+            <text x="50%" y="50%" text-anchor="middle" fill="#fff" font-size="24px" font-weight="bold" font-family="Arial">STRESS</path>
+          </svg>
+
+          <div class="p-4">
+            <h4 class="fw-bold">Mieux comprendre le Stress</h4>
+            <p class="text-muted small">Un programme complet pour comprendre ses mécanismes biologiques et reprendre le contrôle par la TCC.</p>
+            <hr>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-bold text-primary">5 Modules</span>
+              <a href="/formations/comprendre-le-stress" class="btn btn-outline-primary btn-sm rounded-pill">Découvrir le programme</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="course-card shadow-sm rounded-4 overflow-hidden bg-white h-100 border-0 opacity-75">
+          <div class="course-badge px-3 py-1 bg-secondary text-white position-absolute mt-3 ms-3 rounded-pill small">Bientôt disponible</div>
+          <div class="placeholder-img bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+            <i class="bi bi-clock-history fs-1 text-muted"></i>
+          </div>
+          <div class="p-4">
+            <h4 class="fw-bold text-muted">Anxiété Généralisée (TAG)</h4>
+            <p class="text-muted small">Apprendre à gérer l'inquiétude chronique et les scénarios catastrophes du futur.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="course-card shadow-sm rounded-4 overflow-hidden bg-white h-100 border-0 opacity-75">
+          <div class="course-badge px-3 py-1 bg-secondary text-white position-absolute mt-3 ms-3 rounded-pill small">Prochainement</div>
+          <div class="placeholder-img bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+            <i class="bi bi-gear-wide-connected fs-1 text-muted"></i>
+          </div>
+          <div class="p-4">
+            <h4 class="fw-bold text-muted">Protocoles TOC</h4>
+            <p class="text-muted small">Désamorcer les rituels et les pensées intrusives par l'exposition et la prévention de réponse.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .course-card { transition: all 0.3s ease; }
+  .course-card:hover { transform: translateY(-10px); }
+  .course-badge { z-index: 10; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+</style>

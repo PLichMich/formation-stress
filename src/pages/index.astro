@@ -1,22 +1,29 @@
 ---
 import Master from '../layouts/Master.astro';
 import Hero from '../components/landing/Hero.astro';
+import PainPoints from '../components/landing/PainPoints.astro'; // Nouvelle section
 import WhyUs from '../components/landing/WhyUs.astro';
-import Services from '../components/landing/Services.astro';
-import CallToAction from '../components/landing/CallToAction.astro';
-import Features from '../components/landing/Features.astro';
-import RecentPosts from '../components/landing/RecentPosts.astro';
-
-// On importera ici nos futurs composants (About, Services, etc.)
+import CourseCatalog from '../components/landing/CourseCatalog.astro'; // Nouvelle section
+import TeamPreview from '../components/landing/TeamPreview.astro'; 
+import CallToAction from '../components/landing/CallToAction.astro'; 
 ---
 
-<Master title="Accueil | Formation Gestion du Stress">
-    
+<Master title="StressAction | Expertise en gestion du stress et TCC">
+  
+  <main class="main">
+
     <Hero />
+
+    <PainPoints />
+
     <WhyUs />
-    <Services />
+
+    <CourseCatalog />
+
+    <TeamPreview />
+
     <CallToAction />
-    <!-- <Features />
-    <RecentPosts /> -->
+
+  </main>
 
 </Master>

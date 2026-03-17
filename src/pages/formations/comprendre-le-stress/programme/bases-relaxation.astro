@@ -9,39 +9,61 @@ import Master from '../../../../layouts/Master.astro';
         <div class="row justify-content-center">
           <div class="col-lg-8">
             
-            <a href="/formations/comprendre-le-stress" class="btn btn-link text-decoration-none mb-4 p-0">
-              <i class="bi bi-arrow-left"></i> Retour au programme
+            <a href="/formations/comprendre-le-stress" class="btn btn-link text-decoration-none mb-4 p-0 d-inline-flex align-items-center">
+              <i class="bi bi-arrow-left me-2"></i> Retour au programme
             </a>
 
-            <h1 class="fw-bold mb-4" style="color: #341f97;">Module 4 : Apprendre les bases de la relaxation et ses bienfaits.</h1>
+            <h1 class="fw-bold mb-4" style="color: #341f97;">Module 4 : Apprendre les bases de la relaxation et ses bienfaits</h1>
             
             <div class="content fs-5 text-muted shadow-sm p-4 p-md-5 bg-white rounded-4 border-top border-4" style="border-top-color: #6f42c1 !important;">
               <p class="mb-4">
-                Le but de ce module est d'expliquer les aspects méconnus de la relaxation et de la méditation.
+                Contrairement aux idées reçues, la relaxation n’est pas un bouton "OFF" sur lequel on appuie. C'est un <strong>entraînement biologique</strong> du système nerveux.
               </p>
               <p class="mb-4">
-                Pour les personnes stressées, la relaxation ne semblent pas si efficaces que cela, parfois même, le simple fait d'essayer de se relaxer les stresse plus qu'autrechose. 
+                Pour beaucoup, essayer de se détendre produit l'effet inverse : une impatience ou une anxiété accrue. Dans ce module, nous déconstruisons ces obstacles. Nous expliquerons pourquoi votre corps peut parfois résister au calme et comment transformer cette difficulté en une étape de progression.
               </p>
               <p class="mb-4">
-                Dans ce module, nous verrons pourquoi, quels sont les avantages de la relaxation régulière à long terme et les difficultés que l'on peut rencontrer.  
+                L’objectif n'est pas d'atteindre le calme absolu immédiatement, mais de donner à votre organisme des outils concrets pour abaisser son niveau d'alerte de manière régulière et durable.
               </p>
 
-              <h4 class="text-dark fw-bold mb-3">Au programme de cette séance :</h4>
+              <h4 class="text-dark fw-bold mb-3 mt-5">Au programme de cette séance :</h4>
               <ul class="list-group list-group-flush mb-4">
-                <li class="list-group-item bg-transparent"><i class="bi bi-check2-circle text-primary me-2"></i>La cohérence cardiaque </li>
-                <li class="list-group-item bg-transparent"><i class="bi bi-check2-circle text-primary me-2"></i>La relaxation progressive de Jacobson</li>
-                <li class="list-group-item bg-transparent"><i class="bi bi-check2-circle text-primary me-2"></i>La pleine conscience</li>
-                <li class="list-group-item bg-transparent"><i class="bi bi-check2-circle text-primary me-2"></i> Exercice pratiques afin d'explorer les difficultés de la relaxation ou de la méditation</li>
+                <li class="list-group-item bg-transparent d-flex align-items-start p-3 border-0">
+                  <i class="bi bi-check2-circle text-primary me-3 mt-1"></i>
+                  <div>
+                    <strong>La Cohérence Cardiaque :</strong> Maîtriser le lien direct entre respiration et rythme cardiaque pour équilibrer le système nerveux.
+                  </div>
+                </li>
+                <li class="list-group-item bg-transparent d-flex align-items-start p-3 border-0">
+                  <i class="bi bi-check2-circle text-primary me-3 mt-1"></i>
+                  <div>
+                    <strong>La Méthode Jacobson :</strong> Comprendre le lien entre tension musculaire et stress mental par le relâchement progressif de groupes musculaires spécifiques.
+                  </div>
+                </li>
+                <li class="list-group-item bg-transparent d-flex align-items-start p-3 border-0">
+                  <i class="bi bi-check2-circle text-primary me-3 mt-1"></i>
+                  <div>
+                    <strong>L'approche Pleine Conscience :</strong> Apprendre à observer ses pensées et ses sensations sans jugement pour ne pas se laisser emporter par elles.
+                  </div>
+                </li>
+                <li class="list-group-item bg-transparent d-flex align-items-start p-3 border-0">
+                  <i class="bi bi-check2-circle text-primary me-3 mt-1"></i>
+                  <div>
+                    <strong>Analyse des résistances :</strong> Comprendre pourquoi la relaxation peut parfois échouer et comment ajuster sa pratique personnelle.
+                  </div>
+                </li>
               </ul>
 
-              <div class="p-3 rounded-3" style="background: rgba(111, 66, 193, 0.05);">
-                <p class="small mb-0"><strong>Note :</strong> Ce module fait partie du parcours complet. Il est conçu pour s'imbriquer avec les autres étapes de la formation.</p>
+              <div class="p-3 rounded-3 mt-5" style="background: rgba(111, 66, 193, 0.05); border-left: 4px solid #6f42c1;">
+                <p class="small mb-0 text-dark">
+                  <strong>Note :</strong> Ce module apporte la dimension corporelle indispensable au parcours complet. Après avoir travaillé sur le mental (M2) et les émotions (M3), nous donnons ici au corps le signal de sécurité dont il a besoin.
+                </p>
               </div>
             </div>
 
-            <div class="text-center mt-5">
-               <p class="mb-3">Prêt à entamer ce changement ?</p>
-               <a href="/formations/comprendre-le-stress/sessions/mars-2026-houdeng-dv" class="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-bold">
+            <div class="text-center mt-5 pt-4">
+               <p class="mb-3 fs-5">Prêt à donner à votre corps les outils du calme ?</p>
+               <a href="/formations/comprendre-le-stress/sessions/mars-2026-houdeng-dv" class="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-bold shadow-sm">
                  S'inscrire à la prochaine session
                </a>
             </div>
@@ -54,7 +76,16 @@ import Master from '../../../../layouts/Master.astro';
 </Master>
 
 <style>
+  /* Force le background du header pour cette page */
   :global(#header) {
     background: #1a0b33 !important;
+  }
+  
+  /* Amélioration de la lisibilité de la liste */
+  .list-group-item {
+    transition: background-color 0.2s ease;
+  }
+  .list-group-item:hover {
+    background-color: rgba(111, 66, 193, 0.02) !important;
   }
 </style>

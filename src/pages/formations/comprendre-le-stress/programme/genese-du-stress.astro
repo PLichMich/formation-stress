@@ -9,38 +9,61 @@ import Master from '../../../../layouts/Master.astro';
         <div class="row justify-content-center">
           <div class="col-lg-8">
             
-            <a href="/formations/comprendre-le-stress" class="btn btn-link text-decoration-none mb-4 p-0">
-              <i class="bi bi-arrow-left"></i> Retour au programme
+            <a href="/formations/comprendre-le-stress" class="btn btn-link text-decoration-none mb-4 p-0 d-inline-flex align-items-center">
+              <i class="bi bi-arrow-left me-2"></i> Retour au programme
             </a>
 
-            <h1 class="fw-bold mb-4" style="color: #341f97;">Module 1 : découverte du cercle vicieux en rapport avec le stress !</h1>
+            <h1 class="fw-bold mb-4" style="color: #341f97;">Module 1 : Le cercle vicieux du stress — Comprendre pour agir</h1>
             
             <div class="content fs-5 text-muted shadow-sm p-4 p-md-5 bg-white rounded-4 border-top border-4" style="border-top-color: #6f42c1 !important;">
               <p class="mb-4">
-                Le but de ce premier module est d'avoir une idée plus précise des mécanismes du stress et de son évolution dans le temps. 
+                Le stress est souvent perçu comme un ennemi extérieur. Pourtant, il est avant tout un mécanisme biologique sophistiqué dont le but est de vous garder en vie. 
               </p>
               <p class="mb-4">
-                Nous verrons que le stress est en réalité peu connu et qu'on peu le décomposer en plusieurs parties, les différentes parties que nous aborderons durant les modules suivants.
+                Le problème survient quand ce système s'emballe et tourne en boucle. Dans ce premier module, nous allons décomposer les rouages du stress pour comprendre comment il évolue dans le temps et pourquoi il semble parfois impossible à arrêter.
               </p>
               <p class="mb-4">
-                Dans ce premier module, nous aborderons donc le stress d'une manière peu habituelle mais de façon logique et exhaustive.
+                Nous poserons les bases de notre approche multidisciplinaire en analysant le stress d'une manière logique et exhaustive : comme un système complexe où chaque partie influence l'autre.
               </p>
 
-              <h4 class="text-dark fw-bold mb-3">Au programme de cette séance :</h4>
+              <h4 class="text-dark fw-bold mb-3 mt-5">Au programme de cette séance :</h4>
               <ul class="list-group list-group-flush mb-4">
-                <li class="list-group-item bg-transparent"><i class="bi bi-check2-circle text-primary me-2"></i>Qu'est-ce que le stress et quelle est sa raison d'être ?</li>
-                <li class="list-group-item bg-transparent"><i class="bi bi-check2-circle text-primary me-2"></i>Que faut-il prendre en compte pour le combattre efficacement ?</li>
-                <li class="list-group-item bg-transparent"><i class="bi bi-check2-circle text-primary me-2"></i> Exercice pratique sur les différents cercles vicieux/vertueux dans lesquels on se trouve quand on est sous stress</li>
+                <li class="list-group-item bg-transparent d-flex align-items-start p-3 border-0">
+                  <i class="bi bi-check2-circle text-primary me-3 mt-1"></i>
+                  <div>
+                    <strong>La biologie du stress :</strong> Qu'est réellement le stress  et quelle est sa raison d'être biologique ?
+                  </div>
+                </li>
+                <li class="list-group-item bg-transparent d-flex align-items-start p-3 border-0">
+                  <i class="bi bi-check2-circle text-primary me-3 mt-1"></i>
+                  <div>
+                    <strong>Les 3 composantes :</strong> Découvrir comment le corps, les pensées et les comportements s'entremêlent pour créer votre expérience du stress.
+                  </div>
+                </li>
+                <li class="list-group-item bg-transparent d-flex align-items-start p-3 border-0">
+                  <i class="bi bi-check2-circle text-primary me-3 mt-1"></i>
+                  <div>
+                    <strong>Le Cercle Vicieux :</strong> Identifier les mécanismes qui maintiennent le stress à long terme et comment les transformer en cercle vertueux.
+                  </div>
+                </li>
+                <li class="list-group-item bg-transparent d-flex align-items-start p-3 border-0">
+                  <i class="bi bi-check2-circle text-primary me-3 mt-1"></i>
+                  <div>
+                    <strong>Exercice pratique :</strong> Cartographie personnelle de votre propre cycle de stress pour identifier vos futurs leviers de changement.
+                  </div>
+                </li>
               </ul>
 
-              <div class="p-3 rounded-3" style="background: rgba(111, 66, 193, 0.05);">
-                <p class="small mb-0"><strong>Note :</strong> Ce module fait partie du parcours complet. Il est conçu pour s'imbriquer avec les autres étapes de la formation.</p>
+              <div class="p-3 rounded-3 mt-5" style="background: rgba(111, 66, 193, 0.05); border-left: 4px solid #6f42c1;">
+                <p class="small mb-0 text-dark">
+                  <strong>Note :</strong> Ce module est la porte d'entrée indispensable. Il vous donne la vision globale nécessaire pour comprendre l'utilité des outils spécifiques que nous verrons dans les modules suivants.
+                </p>
               </div>
             </div>
 
-            <div class="text-center mt-5">
-               <p class="mb-3">Prêt à entamer ce changement ?</p>
-               <a href="/formations/comprendre-le-stress/sessions/mars-2026-houdeng-dv" class="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-bold">
+            <div class="text-center mt-5 pt-4">
+               <p class="mb-3 fs-5">Prêt à poser le premier diagnostic sur votre stress ?</p>
+               <a href="/formations/comprendre-le-stress/sessions/mars-2026-houdeng-dv" class="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-bold shadow-sm">
                  S'inscrire à la prochaine session
                </a>
             </div>
@@ -55,5 +78,11 @@ import Master from '../../../../layouts/Master.astro';
 <style>
   :global(#header) {
     background: #1a0b33 !important;
+  }
+  .list-group-item {
+    transition: background-color 0.2s ease;
+  }
+  .list-group-item:hover {
+    background-color: rgba(111, 66, 193, 0.02) !important;
   }
 </style>

@@ -9,39 +9,61 @@ import Master from '../../../../layouts/Master.astro';
         <div class="row justify-content-center">
           <div class="col-lg-8">
             
-            <a href="/formations/comprendre-le-stress" class="btn btn-link text-decoration-none mb-4 p-0">
-              <i class="bi bi-arrow-left"></i> Retour au programme
+            <a href="/formations/comprendre-le-stress" class="btn btn-link text-decoration-none mb-4 p-0 d-inline-flex align-items-center">
+              <i class="bi bi-arrow-left me-2"></i> Retour au programme
             </a>
 
-            <h1 class="fw-bold mb-4" style="color: #341f97;">Module 5 : Récapitulatif et apprendre à être vraiment efficace dans la gestion du stress.</h1>
+            <h1 class="fw-bold mb-4" style="color: #341f97;">Module 5 : Synthèse, contrôle et efficacité durable</h1>
             
             <div class="content fs-5 text-muted shadow-sm p-4 p-md-5 bg-white rounded-4 border-top border-4" style="border-top-color: #6f42c1 !important;">
               <p class="mb-4">
-                Le but de ce dernier module est de mieux se définir sois-même par rapport au stress.
+                Le but de ce dernier module est de rassembler toutes les pièces du puzzle pour définir votre propre profil face au stress.
               </p>
               <p class="mb-4">
-                Apprendre à identifier soi-même la manière dont on fonctionne et les différents freins qui nous ont empêchés d'arriver jusqu'au bien-être,grâce aux techniques vues durant tout le parcours 
+                Après avoir exploré le corps, les pensées et les émotions, il est temps d'identifier vos mécanismes personnels : quels sont les leviers qui fonctionnent pour vous et quels freins vous ont empêché, jusqu'ici, d'atteindre un bien-être durable ? 
               </p>
               <p class="mb-4">
-                Dans ce module, nous verrons aussi les principes du contrôle, en rapport avec le stress et le lâcher-prise. 
+                Nous aborderons un concept fondamental des TCC : <strong>le contrôle</strong>. Nous verrons comment faire la distinction entre ce que nous pouvons changer et ce que nous devons apprendre à "lâcher", afin de ne plus épuiser notre énergie inutilement.
               </p>
 
-              <h4 class="text-dark fw-bold mb-3">Au programme de cette séance :</h4>
+              <h4 class="text-dark fw-bold mb-3 mt-5">Au programme de cette séance :</h4>
               <ul class="list-group list-group-flush mb-4">
-                <li class="list-group-item bg-transparent"><i class="bi bi-check2-circle text-primary me-2"></i>Récapitulatif de tout ce qui a été vu </li>
-                <li class="list-group-item bg-transparent"><i class="bi bi-check2-circle text-primary me-2"></i>Expérience sur le concept du contrôle-stress-lâcher-prise.</li>
-                <li class="list-group-item bg-transparent"><i class="bi bi-check2-circle text-primary me-2"></i> Exercice pratiques sur le contrôle</li>
-                <li class="list-group-item bg-transparent"><i class="bi bi-check2-circle text-primary me-2"></i>Clôture</li>
+                <li class="list-group-item bg-transparent d-flex align-items-start p-3 border-0">
+                  <i class="bi bi-check2-circle text-primary me-3 mt-1"></i>
+                  <div>
+                    <strong>Rétrospective :</strong> Synthèse des outils physiologiques et cognitifs vus durant le parcours.
+                  </div>
+                </li>
+                <li class="list-group-item bg-transparent d-flex align-items-start p-3 border-0">
+                  <i class="bi bi-check2-circle text-primary me-3 mt-1"></i>
+                  <div>
+                    <strong>La dynamique du contrôle :</strong> Expérience concrète sur le triangle "Contrôle - Stress - Lâcher-prise".
+                  </div>
+                </li>
+                <li class="list-group-item bg-transparent d-flex align-items-start p-3 border-0">
+                  <i class="bi bi-check2-circle text-primary me-3 mt-1"></i>
+                  <div>
+                    <strong>Plan d'action personnalisé :</strong> Identifier vos zones d'influence pour une gestion du stress efficace au quotidien.
+                  </div>
+                </li>
+                <li class="list-group-item bg-transparent d-flex align-items-start p-3 border-0">
+                  <i class="bi bi-check2-circle text-primary me-3 mt-1"></i>
+                  <div>
+                    <strong>Clôture et bilan :</strong> Consolidation des acquis pour maintenir vos progrès sur le long terme.
+                  </div>
+                </li>
               </ul>
 
-              <div class="p-3 rounded-3" style="background: rgba(111, 66, 193, 0.05);">
-                <p class="small mb-0"><strong>Note :</strong> Ce module fait partie du parcours complet. Il est conçu pour s'imbriquer avec les autres étapes de la formation.</p>
+              <div class="p-3 rounded-3 mt-5" style="background: rgba(111, 66, 193, 0.05); border-left: 4px solid #6f42c1;">
+                <p class="small mb-0 text-dark">
+                  <strong>Note :</strong> Ce module finalise votre parcours. Vous repartez avec une vision claire de votre fonctionnement et une "boîte à outils" prête à l'emploi.
+                </p>
               </div>
             </div>
 
-            <div class="text-center mt-5">
-               <p class="mb-3">Prêt à entamer ce changement ?</p>
-               <a href="/formations/comprendre-le-stress/sessions/mars-2026-houdeng-dv" class="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-bold">
+            <div class="text-center mt-5 pt-4">
+               <p class="mb-3 fs-5">Prêt à devenir l'acteur de votre propre bien-être ?</p>
+               <a href="/formations/comprendre-le-stress/sessions/mars-2026-houdeng-dv" class="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-bold shadow-sm">
                  S'inscrire à la prochaine session
                </a>
             </div>
@@ -56,5 +78,11 @@ import Master from '../../../../layouts/Master.astro';
 <style>
   :global(#header) {
     background: #1a0b33 !important;
+  }
+  .list-group-item {
+    transition: background-color 0.2s ease;
+  }
+  .list-group-item:hover {
+    background-color: rgba(111, 66, 193, 0.02) !important;
   }
 </style>
