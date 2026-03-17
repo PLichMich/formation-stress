@@ -1,7 +1,6 @@
 ---
 import Master from '../../../../layouts/Master.astro';
 
-// Liste des modules mise à jour avec les nouveaux titres et les liens vers les fichiers
 const modules = [
   { name: "Module 1 : Mieux comprendre : La genèse du stress", slug: "genese-du-stress" },
   { name: "Module 2 : Cognitions : Identifier les forces et les freins", slug: "forces-et-freins" },
@@ -9,39 +8,60 @@ const modules = [
   { name: "Module 4 : La relaxation : les bases", slug: "bases-relaxation" },
   { name: "Module 5 : Action : Devenir autonome", slug: "autonomie-action" }
 ];
+
+const dates = [
+  "Jeudi 26 mars 2026",
+  "Jeudi 2 avril 2026",
+  "Jeudi 9 avril 2026",
+  "Jeudi 16 avril 2026",
+  "Jeudi 23 avril 2026"
+];
 ---
 
 <Master title="Inscription | StressAction" bodyClass="contact-page">
 
-  <div class="page-title dark-background" data-aos="fade" style="background-image: url(/assets/img/contact-page-title-bg.jpg);">
+  <div class="page-title dark-background" data-aos="fade" style="background-image: url(/assets/img/contact-page-title-bg.jpg); background-color: #1a0b33; padding: 60px 0;">
     <div class="container">
       <h1>Inscription & Prise en charge</h1>
       <nav class="breadcrumbs">
-        <ol>
-          <li><a href="/">Accueil</a></li>
-          <li><a href="/formations">Formation</a></li>
-          <li class="current">Inscription</li>
+        <ol class="list-unstyled d-flex text-white-50">
+          <li><a href="/" class="text-white-50 text-decoration-none">Accueil</a></li>
+          <li class="mx-2">/</li>
+          <li><a href="/#courses" class="text-white-50 text-decoration-none">Formation</a></li>
+          <li class="mx-2">/</li>
+          <li class="current text-white">Inscription</li>
         </ol>
       </nav>
     </div>
   </div>
 
-  <section id="inscription" class="contact section">
+  <section id="inscription" class="contact section py-5">
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-
       <div class="row gy-4">
 
         <div class="col-lg-5">
-          <div class="info-item d-flex flex-column" data-aos="fade-up" data-aos-delay="200" style="height: 100%; align-items: flex-start; text-align: left; padding: 30px; border-radius: 10px; background: #f9f9f9;">
+          <div class="info-item d-flex flex-column shadow-sm" data-aos="fade-up" data-aos-delay="200" style="height: 100%; align-items: flex-start; text-align: left; padding: 30px; border-radius: 15px; background: #fdfcfa; border: 1px solid rgba(111, 66, 193, 0.1);">
             
             <div class="mb-4 w-100">
               <div class="d-flex align-items-center mb-3">
-                <i class="bi bi-geo-alt" style="font-size: 24px; color: var(--accent-color); margin-right: 15px;"></i>
-                <h4 class="mb-0" style="font-size: 18px; font-weight: 700;">Lieu de la session</h4>
+                <i class="bi bi-calendar-event fs-4 text-primary me-3"></i>
+                <h4 class="mb-0 fw-bold">Dates des différentes sessions</h4>
               </div>
-              <p class="ms-5 text-muted" style="font-size: 15px;">
+              <div class="ms-5 text-muted small fw-bold">
+                {dates.map((date) => (
+                  <p class="mb-1">{date}</p>
+                ))}
+              </div>
+            </div>
+
+            <div class="mb-4 w-100">
+              <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-geo-alt fs-4 text-primary me-3"></i>
+                <h4 class="mb-0 fw-bold">Lieu de du parcours</h4>
+              </div>
+              <p class="ms-5 text-muted small">
                 <strong>Houdeng-Gœgnies</strong> (La Louvière)<br>
-                <a target="_blank" href="https://maps.google.com/?q=Rue+Jeanne+Haye+35+7110+Houdeng-Aimeries" class="text-decoration-none">
+                <a target="_blank" href="https://maps.google.com/?q=Rue+Jeanne+Haye+35+7110+Houdeng-Aimeries" class="text-decoration-none text-primary">
                   Rue Jeanne Haye n°35, 7110 Houdeng-Aimeries
                 </a>
               </p>
@@ -49,82 +69,75 @@ const modules = [
 
             <div class="mb-4 w-100">
               <div class="d-flex align-items-center mb-3">
-                <i class="bi bi-people" style="font-size: 24px; color: var(--accent-color); margin-right: 15px;"></i>
-                <h4 class="mb-0" style="font-size: 18px; font-weight: 700;">Vos formateurs</h4>
+                <i class="bi bi-people fs-4 text-primary me-3"></i>
+                <h4 class="mb-0 fw-bold">Vos formateurs</h4>
               </div>
-              <p class="ms-5 text-muted" style="font-size: 15px;">
+              <p class="ms-5 text-muted small">
                 <strong>David Vandenbosch</strong> & <strong>Michaël Plichart</strong>.<br>
-                Un duo d'experts en TCC et physiologie du stress.
+                Un duo d'experts en TCC et physiologie.
               </p>
             </div>
 
-            <hr class="w-100" style="opacity: 0.1;">
+            <hr class="w-100 opacity-10">
 
             <div class="d-flex align-items-center mb-3">
-               <i class="bi bi-shield-check" style="font-size: 32px; color: var(--accent-color); margin-right: 15px;"></i>
-               <h3 class="mb-0">Prise en charge</h3>
+               <i class="bi bi-shield-check fs-3 text-primary me-3"></i>
+               <h4 class="mb-0 fw-bold">Prise en charge</h4>
             </div>
-            <p class="mb-4">Cette formation est éligible au remboursement via <strong>PsyHainaut</strong>. Pour valider votre dossier, votre numéro NISS est requis.</p>
+            <p class="small mb-4 text-muted">Cette formation est éligible au remboursement via <strong>PsyHainaut</strong>. Votre numéro NISS est requis pour le dossier.</p>
             
-            <hr class="w-100" style="opacity: 0.1;">
+            <hr class="w-100 opacity-10">
 
-            <h4 class="mt-2" style="font-size: 18px; font-weight: 700;">Détail du parcours :</h4>
-            <ul class="list-unstyled mb-4" style="line-height: 1.8; font-size: 15px;">
+            <h4 class="mt-2 fw-bold small text-uppercase" style="letter-spacing: 1px;">Détail du parcours :</h4>
+            <ul class="list-unstyled mb-4 small">
               {modules.map((mod) => (
                 <li class="d-flex align-items-start mb-2">
-                  <i class="bi bi-check2-circle" style="color: var(--accent-color); margin-right: 10px; font-size: 18px;"></i> 
-                  <a href={`/formations/comprendre-le-stress/programme/${mod.slug}`} 
-                     class="text-decoration-none text-dark link-hover-accent" 
-                     target="_blank">
-                    {mod.name}
-                  </a>
+                  <i class="bi bi-check2-circle text-primary me-2"></i> 
+                  <span class="text-dark">{mod.name}</span>
                 </li>
               ))}
             </ul>
 
-            <div class="mt-auto p-3 w-100" style="background: rgba(var(--accent-color-rgb), 0.08); border-radius: 8px; border-left: 4px solid var(--accent-color);">
-              <p class="mb-0" style="font-size: 14px; color: #444;">
+            <div class="mt-auto p-3 w-100" style="background: rgba(111, 66, 193, 0.05); border-radius: 8px; border-left: 4px solid #6f42c1;">
+              <p class="mb-0 small text-muted">
                 <i class="bi bi-info-circle me-2"></i> 
-                <strong>Note :</strong> Une fois le formulaire rempli, vous recevrez les instructions pour le paiement.
+                <strong>Note :</strong> Après validation, vous recevrez les instructions de paiement par email.
               </p>
             </div>
           </div>
         </div>
 
         <div class="col-lg-7">
-          <div class="form-wrapper" style="background: #fff; padding: 30px; border: 1px solid #eee; border-radius: 10px;">
-            
-            <div class="mb-4 text-center text-md-start">
-              <h3 style="font-weight: 700;">Formulaire d'inscription</h3>
-              <p class="text-muted">Remplissez ces informations pour réserver votre place.</p>
+          <div class="form-wrapper bg-white shadow-sm p-4 p-md-5 rounded-4 border">
+            <div class="mb-4">
+              <h3 class="fw-bold">Formulaire d'inscription</h3>
+              <p class="text-muted small">Réservation pour la session de Mars 2026.</p>
             </div>
 
-            <form id="registrationForm" class="registration-form">
-              <div class="row gy-4">
-
+            <form id="registrationForm">
+              <div class="row gy-3">
                 <div class="col-md-6">
-                  <label class="form-label fw-bold small">Nom et Prénom</label>
+                  <label class="form-label fw-bold small text-secondary">Nom et Prénom</label>
                   <input type="text" name="name" class="form-control custom-input" placeholder="Ex: Jean Dupont" required>
                 </div>
 
                 <div class="col-md-6">
-                  <label class="form-label fw-bold small">Email</label>
+                  <label class="form-label fw-bold small text-secondary">Email</label>
                   <input type="email" name="email" class="form-control custom-input" placeholder="Ex: jean@email.be" required>
                 </div>
 
                 <div class="col-md-12">
-                  <label class="form-label fw-bold small">Numéro NISS (Registre National)</label>
+                  <label class="form-label fw-bold small text-secondary">Numéro NISS (Registre National)</label>
                   <input type="text" name="niss" class="form-control custom-input" placeholder="00.00.00-000.00" required>
-                  <div class="form-text" style="font-size: 12px;">Nécessaire pour le remboursement PsyHainaut.</div>
                 </div>
 
                 <div class="col-md-6">
-                  <label class="form-label fw-bold small">Téléphone</label>
+                  <label class="form-label fw-bold small text-secondary">Téléphone</label>
                   <input type="tel" name="phone" class="form-control custom-input" placeholder="Ex: 0470 00 00 00" required>
                 </div>
 
                 <div class="col-md-6">
-                  <label class="form-label fw-bold small">Vous êtes...</label>
+                  <label class="form-label fw-bold small text-secondary">Vous êtes...</label>
                   <select name="status" class="form-select custom-input" required>
                     <option value="" disabled selected>Sélectionnez votre profil</option>
                     <option value="particulier">Un particulier</option>
@@ -134,18 +147,27 @@ const modules = [
                 </div>
 
                 <div class="col-md-12">
-                  <label class="form-label fw-bold small">Attentes ou questions (Optionnel)</label>
-                  <textarea name="message" class="form-control custom-input" rows="4" placeholder="Qu'attendez-vous de cette formation ?"></textarea>
+                  <label class="form-label fw-bold small text-secondary">Attentes ou questions (Optionnel)</label>
+                  <textarea name="message" class="form-control custom-input" rows="3" placeholder="Qu'attendez-vous de cette formation ?"></textarea>
                 </div>
 
                 <div class="col-md-12 text-center mt-4">
-                  <div id="formStatus" style="display:none; padding: 15px; margin-bottom: 20px; border-radius: 5px; font-weight: 500;"></div>
-                  <button type="submit" id="submitBtn" class="btn-submit">Valider mon inscription</button>
-                  <p class="mt-3 mb-0" style="font-size: 12px; color: #888;">
-                    <i class="bi bi-lock-fill me-1"></i> Vos données sont chiffrées et protégées (RGPD).
+                  <div id="form-loader" class="alert alert-info py-2" style="display:none;">
+                    <span class="spinner-border spinner-border-sm me-2"></span> Enregistrement en cours...
+                  </div>
+                  <div id="form-success" class="alert alert-success py-3" style="display:none;">
+                    <h5 class="fw-bold mb-1">Inscription transmise !</h5>
+                    <p class="mb-0 small">Merci. Votre demande a bien été envoyée à Michaël Plichart.</p>
+                  </div>
+                  
+                  <button type="submit" id="submitBtn" class="btn btn-primary btn-lg w-100 rounded-pill fw-bold py-3 shadow-sm">
+                    Confirmer mon inscription
+                  </button>
+                  
+                  <p class="mt-3 mb-0 text-muted" style="font-size: 11px;">
+                    <i class="bi bi-lock-fill me-1 text-success"></i> Vos données sont sécurisées et traitées selon le RGPD.
                   </p>
                 </div>
-
               </div>
             </form>
           </div>
@@ -155,32 +177,53 @@ const modules = [
     </div>
   </section>
 
+  <script is:inline>
+    const regForm = document.getElementById('registrationForm');
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwsH_87Ruj4h5Q-fXe_2aPibJzeP3GcDpRhGWLezJQ1oHi5IRiBJ2kx4FhCOw2IwHh8yg/exec';
+
+    regForm.addEventListener('submit', e => {
+      e.preventDefault();
+      
+      const btn = document.getElementById('submitBtn');
+      const loader = document.getElementById('form-loader');
+      const successMsg = document.getElementById('form-success');
+
+      btn.disabled = true;
+      btn.style.display = 'none';
+      loader.style.display = 'block';
+
+      fetch(scriptURL, { method: 'POST', body: new FormData(regForm)})
+        .then(response => {
+          loader.style.display = 'none';
+          successMsg.style.display = 'block';
+          regForm.reset();
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+          loader.style.display = 'none';
+          btn.style.display = 'block';
+          btn.disabled = false;
+          alert("Une erreur est survenue lors de l'envoi du formulaire.");
+        });
+    });
+  </script>
+
 </Master>
 
 <style>
+  :global(#header) { background: #1a0b33 !important; }
   .custom-input {
-    padding: 12px 15px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    font-size: 15px;
-    transition: all 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    font-size: 14px;
   }
   .custom-input:focus {
-    border-color: var(--accent-color);
-    box-shadow: 0 0 0 0.2rem rgba(var(--accent-color-rgb), 0.1);
-    outline: none;
+    border-color: #6f42c1;
+    box-shadow: 0 0 0 0.25rem rgba(111, 66, 193, 0.1);
   }
-  .btn-submit {
-    background: var(--accent-color);
-    color: white;
-    border: none;
-    padding: 12px 40px;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 50px;
-    transition: 0.3s;
-    cursor: pointer;
-    width: 100%;
+  .btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
   }
-  .btn-submit:hover {
-    background: color-mix(in srgb, var(--accent-color), black
+</style>
