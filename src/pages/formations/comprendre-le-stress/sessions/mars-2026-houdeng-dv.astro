@@ -20,20 +20,20 @@ const dates = [
 
 <Master title="Inscription | StressAction" bodyClass="contact-page">
 
-  <div class="page-title dark-background" data-aos="fade" style="background-image: url(/assets/img/contact-page-title-bg.jpg); background-color: #1a0b33; padding: 60px 0;">
-    <div class="container">
-      <h1>Inscription & Prise en charge</h1>
-      <nav class="breadcrumbs">
-        <ol class="list-unstyled d-flex text-white-50">
-          <li><a href="/" class="text-white-50 text-decoration-none">Accueil</a></li>
-          <li class="mx-2">/</li>
-          <li><a href="/#courses" class="text-white-50 text-decoration-none">Formation</a></li>
-          <li class="mx-2">/</li>
-          <li class="current text-white">Inscription</li>
-        </ol>
-      </nav>
-    </div>
+<div class="page-title dark-background" data-aos="fade" style="background-image: url(/assets/img/contact-page-title-bg.jpg); background-color: #1a0b33; padding: 120px 0 60px 0; margin-top: 70px;">
+  <div class="container">
+    <h1>Inscription & Prise en charge</h1>
+    <nav class="breadcrumbs">
+      <ol class="list-unstyled d-flex text-white-50">
+        <li><a href="/" class="text-white-50 text-decoration-none">Accueil</a></li>
+        <li class="mx-2">/</li>
+        <li><a href="/#courses" class="text-white-50 text-decoration-none">Formation</a></li>
+        <li class="mx-2">/</li>
+        <li class="current text-white">Inscription</li>
+      </ol>
+    </nav>
   </div>
+</div>
 
   <section id="inscription" class="contact section py-5">
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
@@ -227,5 +227,26 @@ const dates = [
   .btn-primary {
     background-color: #6f42c1;
     border-color: #6f42c1;
+  }
+
+  /* On force un décalage si le header est présent */
+  :global(body.contact-page) {
+    padding-top: 20px; /* Ajuste selon la hauteur réelle de ta navbar */
+  }
+
+  :global(#header) { 
+    background: #1a0b33 !important; 
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* ... reste de ton style ... */
+  .custom-input {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    font-size: 14px;
   }
 </style>
