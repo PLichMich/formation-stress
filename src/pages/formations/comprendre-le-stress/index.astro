@@ -1,5 +1,6 @@
 ---
 import Master from '../../../layouts/Master.astro';
+import ShareButtons from '../../../components/ShareButtons.astro';
 
 const objectifs = [
   "Maîtriser les outils d'apaisement immédiat (Cohérence cardiaque, Jacobson, Pleine conscience)",
@@ -15,9 +16,12 @@ const modules = [
   { id: 4, title: "La relaxation : les bases", slug: "bases-relaxation" },
   { id: 5, title: "Action : Devenir autonome", slug: "autonomie-action" }
 ];
+
+// Récupération de l'URL pour le partage
+const currentUrl = Astro.url.href;
 ---
 
-<Master title="Programme : Comprendre le Stress | StressAction">
+<Master title="Programme : Comprendre le Stress | StressAction" description="Un programme en cinq jours, basé sur les technique TCC, pour réellement comprendre le stress et comment il fonctionne afin de mieux le gérer et le vivre. Le tout à seulement 12,50€ au total" image="/assets/img/hero-formation-comprendre.png">
   <main class="main">
 
     <section class="hero-page d-flex align-items-center">
@@ -27,18 +31,25 @@ const modules = [
           <div class="col-lg-6" data-aos="fade-right">
             <span class="badge mb-3" style="background: rgba(111, 66, 193, 0.1); color: #6f42c1; border-radius: 50px; padding: 8px 18px; border: 1px solid rgba(111, 66, 193, 0.2);">Formation Phare</span>
             <h1 class="display-4 fw-bold mb-4" style="color: #1a0b33; line-height: 1.1;">Apprendre à pêcher sa propre sérénité</h1>
-            <p class="fs-5 text-muted mb-5">
+            <p class="fs-5 text-muted mb-4">
                 Une formation TCC/ACT intensive pour ne plus subir votre stress, mais pour comprendre et maîtriser les outils concrets de votre apaisement.
             </p>
+
+            <div class="mb-5">
+                <ShareButtons 
+                    title="Formation StressAction : Apprendre à pêcher sa propre sérénité" 
+                    url={currentUrl} 
+                />
+            </div>
+
             <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
                 <a href="#programme" class="btn btn-primary btn-lg px-4 py-3 fw-bold rounded-pill">Voir le programme</a>
-                <!-- <a href="#objectifs" class="btn btn-outline-secondary btn-lg px-4 py-3 fw-bold rounded-pill">Objectifs pédagogiques</a> -->
             </div>
           </div>
 
           <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
             <div class="hero-image-wrapper p-3 bg-white shadow-lg rounded-4">
-                <img src="/assets/img/hero-formation-comprendre.png" alt="Philosophie de sérénité et d'autonomie StressAction (image_0.png)" class="img-fluid rounded-3">
+                <img src="/assets/img/hero-formation-comprendre.png" alt="Philosophie de sérénité et d'autonomie StressAction" class="img-fluid rounded-3">
             </div>
           </div>
 
@@ -107,39 +118,25 @@ const modules = [
 </Master>
 
 <style>
-/* Fixer la Navbar dès le départ */
   :global(#header) {
-    background: #1a0b33 !important; /* Couleur sombre solide */
+    background: #1a0b33 !important;
   }
 
-  /* Hero Section : Un dégradé "Inversé" et marqué */
   .hero-page {
     padding-top: 140px;
     padding-bottom: 80px;
     min-height: 85vh;
-    /* Un dégradé inversé : il part d'un violet plus soutenu en haut pour aller vers le clair.
-       Cela crée une transition claire avec le reste. */
     background: linear-gradient(180deg, rgba(111, 66, 193, 0.05) 0%, #fffbf2 100%);
     border-bottom: 1px solid rgba(111, 66, 193, 0.1);
   }
 
   .hero-image-wrapper {
-    /* L'ombre est plus marquée pour l'essai 2 */
     box-shadow: 0 15px 40px rgba(111, 66, 193, 0.1);
   }
 
-  /* Style des boutons pour l'essai 2 */
   .btn-primary {
     background-color: #6f42c1;
     border-color: #6f42c1;
-  }
-  .btn-outline-secondary {
-    color: #6f42c1;
-    border-color: #6f42c1;
-  }
-  .btn-outline-secondary:hover {
-    background-color: #6f42c1;
-    color: white;
   }
 
   .module-number {
@@ -173,13 +170,12 @@ const modules = [
     background: #6f42c1;
     border-radius: 2px;
   }
-  /* Change la couleur du rond au survol de la carte */
+
   .hover-card:hover .module-number {
     background: white;
     color: #6f42c1;
   }
 
-  /* Pour l'italique des citations */
   .italic {
     font-style: italic;
     border-left: 3px solid #dee2e6;
