@@ -1,0 +1,131 @@
+---
+import Layout from '../../../layouts/Master.astro';
+---
+
+<Layout title="Liste d'attente - Comprendre le stress | StressAction">
+  <main class="py-5 mt-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          
+          <div class="text-center mb-5 mt-4">
+            <h1 class="display-5 fw-bold text-primary">Liste d'attente</h1>
+            <h2 class="text-secondary">Comprendre le stress.</h2>
+            <p class="lead text-muted">
+              Vous n'êtes pas disponible pour la session de mars ? Laissez vos coordonnées pour être averti(e) en priorité de la prochaine session (Mai/Juin 2026).
+            </p>
+          </div>
+
+          <div class="card shadow-sm border-0 bg-light p-4 p-md-5">
+            <form id="waitlistForm">
+              <input type="hidden" name="type" value="liste_attente" />
+              <input type="hidden" name="formation" value="Comprendre le stress - Cycle suivant" />
+
+              <div class="mb-4">
+                <label for="name" class="form-label fw-bold">Nom et Prénom</label>
+                <input type="text" id="name" name="name" class="form-control form-control-lg" placeholder="Votre nom" required />
+              </div>
+
+              <div class="mb-4">
+                <label for="email" class="form-label fw-bold">Adresse Email</label>
+                <input type="email" id="email" name="email" class="form-control form-control-lg" placeholder="nom@exemple.com" required />
+              </div>
+
+              <div class="mb-4">
+                <label for="phone" class="form-label fw-bold">Numéro de téléphone</label>
+                <input type="tel" id="phone" name="phone" class="form-control form-control-lg" placeholder="Ex: 04XX / XX XX XX" required />
+              </div>
+
+              <div class="d-grid gap-2">
+                <button type="submit" id="submitBtn" class="btn btn-primary btn-lg py-3">
+                  M'inscrire sur la liste d'attente
+                </button>
+              </div>
+            </form>
+
+            <div id="successMessage" class="text-center py-4 d-none">
+              <div class="mb-3">
+                <span class="display-4 text-success">✅</span>
+              </div>
+              <h3 class="text-success">C'est noté !</h3>
+              <p>Votre inscription sur la liste d'attente a bien été enregistrée. Vous recevrez un email de confirmation d'ici quelques instants.</p>
+              <a href="/" class="btn btn-outline-primary mt-3">Retour à l'accueil</a>
+            </div>
+
+            <div id="errorMessage" class="alert alert-danger mt-4 d-none">
+              Une erreur est survenue. Veuillez réessayer ou me contacter par téléphone.
+            </div>
+          </div>
+
+          <p class="text-center text-muted mt-4 small">
+            En vous inscrivant, vous acceptez d'être recontacté(e) par StressAction pour l'organisation de futures sessions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style is:global>
+  /* FIX NAVBAR : Force l'affichage immédiat sur cette page */
+  #header {
+    background: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1) !important;
+    position: fixed !important;
+    transition: none !important;
+  }
+
+  /* Force la couleur du texte du menu car il attend le scroll pour devenir sombre */
+  #navmenu ul li a {
+    color: #444 !important;
+  }
+
+  /* Force les couleurs du logo */
+  #header .logo-text-stress {
+    color: #444 !important;
+  }
+  #header .logo-text-action {
+    color: #6f42c1 !important;
+  }
+
+  /* Correction pour le bouton menu mobile si besoin */
+  .mobile-nav-toggle {
+    color: #444 !important;
+  }
+</style>
+
+<script>
+  const form = document.getElementById('waitlistForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const successMessage = document.getElementById('successMessage');
+  const errorMessage = document.getElementById('errorMessage');
+
+  // REMPLACE PAR TON URL DE DÉPLOIEMENT GOOGLE APPS SCRIPT
+const SCRIPT_URL = import.meta.env.PUBLIC_STRESS_FORMATION_URL;
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    
+    submitBtn.disabled = true;
+    submitBtn.innerText = "Envoi en cours...";
+    errorMessage.classList.add('d-none');
+
+    const formData = new FormData(form);
+
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      form.classList.add('d-none');
+      successMessage.classList.remove('d-none');
+      window.scrollTo(0, 0); // Remonte en haut pour voir le message de succès
+    })
+    .catch(error => {
+      console.error('Erreur:', error);
+      submitBtn.disabled = false;
+      submitBtn.innerText = "M'inscrire sur la liste d'attente";
+      errorMessage.classList.remove('d-none');
+    });
+  });
+</script>

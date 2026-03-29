@@ -62,9 +62,9 @@ import Master from '../layouts/Master.astro';
                 <textarea name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
               </div>
               <div class="col-md-12 text-center">
-                <div id="form-loader" style="display:none;">Chargement...</div>
+                <div id="form-loader" style="display:none; margin-bottom: 10px;">Chargement...</div>
                 <div id="form-success" style="display:none; color: green; margin-bottom: 10px;">Votre message a été envoyé. Merci !</div>
-                <button type="submit" id="submit-btn" style="background: var(--accent-color); border: 0; padding: 10px 30px; color: #fff; transition: 0.4s; border-radius: 4px;">Envoyer</button>
+                <button type="submit" id="submit-btn" style="background: var(--accent-color, #6f42c1); border: 0; padding: 10px 30px; color: #fff; transition: 0.4s; border-radius: 4px;">Envoyer</button>
               </div>
             </div>
           </form>
@@ -74,27 +74,50 @@ import Master from '../layouts/Master.astro';
     </div>
   </section>
 
-  <script is:inline>
-    const form = document.getElementById('contact-form');
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwsH_87Ruj4h5Q-fXe_2aPibJzeP3GcDpRhGWLezJQ1oHi5IRiBJ2kx4FhCOw2IwHh8yg/exec'; // <--- METS TON URL ICI
+  <script>
+    // 1. Récupération de l'URL via Astro (SANS is:inline pour que le .env soit lu)
+    const SCRIPT_URL = import.meta.env.PUBLIC_CONTACT_SCRIPT_URL;
 
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      document.getElementById('submit-btn').disabled = true;
-      document.getElementById('form-loader').style.display = 'block';
+    // 2. Ciblage précis des éléments par leurs IDs actuels
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const btn = document.getElementById('submit-btn') as HTMLButtonElement;
+    const loader = document.getElementById('form-loader');
+    const successMsg = document.getElementById('form-success');
 
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    if (form) {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        
+        // UI : On prépare l'envoi
+        if (btn) {
+          btn.disabled = true;
+          btn.innerText = "Envoi en cours...";
+        }
+        if (loader) loader.style.display = 'block';
+        if (successMsg) successMsg.style.display = 'none';
+
+        // 3. Envoi effectif
+        fetch(SCRIPT_URL, { 
+          method: 'POST', 
+          body: new FormData(form)
+        })
         .then(response => {
-          document.getElementById('form-loader').style.display = 'none';
-          document.getElementById('form-success').style.display = 'block';
+          if (btn) btn.style.display = 'none';
+          if (loader) loader.style.display = 'none';
+          if (successMsg) successMsg.style.display = 'block';
           form.reset();
-          document.getElementById('submit-btn').disabled = false;
         })
         .catch(error => {
-          console.error('Error!', error.message);
+          console.error('Erreur !', error.message);
+          if (btn) {
+            btn.disabled = false;
+            btn.innerText = "Envoyer";
+          }
+          if (loader) loader.style.display = 'none';
           alert("Une erreur est survenue lors de l'envoi.");
         });
-    });
+      });
+    }
   </script>
 
 </Master>

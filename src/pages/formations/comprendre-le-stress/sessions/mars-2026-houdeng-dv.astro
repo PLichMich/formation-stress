@@ -179,9 +179,12 @@ const dates = [
     </div>
   </section>
 
-  <script is:inline>
+<script>
+    // 1. On enlève "is:inline" pour qu'Astro puisse injecter la variable .env
+    // 2. On s'assure d'utiliser PUBLIC_GOOGLE_SCRIPT_URL
+    const SCRIPT_URL = import.meta.env.PUBLIC_STRESS_FORMATION_URL;
+
     const regForm = document.getElementById('registrationForm');
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwsH_87Ruj4h5Q-fXe_2aPibJzeP3GcDpRhGWLezJQ1oHi5IRiBJ2kx4FhCOw2IwHh8yg/exec';
 
     regForm.addEventListener('submit', e => {
       e.preventDefault();
@@ -194,7 +197,8 @@ const dates = [
       btn.style.display = 'none';
       loader.style.display = 'block';
 
-      fetch(scriptURL, { method: 'POST', body: new FormData(regForm)})
+      // On utilise bien SCRIPT_URL (en majuscules comme défini plus haut)
+      fetch(SCRIPT_URL, { method: 'POST', body: new FormData(regForm)})
         .then(response => {
           loader.style.display = 'none';
           successMsg.style.display = 'block';
