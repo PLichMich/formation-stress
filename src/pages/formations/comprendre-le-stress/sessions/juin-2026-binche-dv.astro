@@ -1,0 +1,256 @@
+---
+import Master from '../../../../layouts/Master.astro';
+
+const modules = [
+  { name: "Module 1 : Mieux comprendre : La genèse du stress", slug: "genese-du-stress" },
+  { name: "Module 2 : Cognitions : Identifier les forces et les freins", slug: "forces-et-freins" },
+  { name: "Module 3 : Les émotions et nos comportements", slug: "emotions-et-comportements" },
+  { name: "Module 4 : La relaxation : les bases", slug: "bases-relaxation" },
+  { name: "Module 5 : Action : Devenir autonome", slug: "autonomie-action" }
+];
+
+const dates = [
+  "mercredi 17 juin 2026 de 18h00 à 19h30",
+  "mercredi 24 juin 2026 de 18h00 à 19h30",
+  "mercredi 1 juillet 2026 de 18h00 à 19h30",
+  "mercredi 8 juillet 2026 de 18h00 à 19h30",
+  "mercredi 15 juillet 2026 de 18h00 à 19h30"
+];
+---
+
+<Master title="Inscription | StressAction" bodyClass="contact-page">
+
+<div class="page-title dark-background" data-aos="fade" style="background-image: url(/assets/img/contact-page-title-bg.jpg); background-color: #1a0b33; padding: 120px 0 60px 0; margin-top: 70px;">
+  <div class="container">
+    <h1>Inscription & Prise en charge</h1>
+    <nav class="breadcrumbs">
+      <ol class="list-unstyled d-flex text-white-50">
+        <li><a href="/" class="text-white-50 text-decoration-none">Accueil</a></li>
+        <li class="mx-2">/</li>
+        <li><a href="/#courses" class="text-white-50 text-decoration-none">Formation</a></li>
+        <li class="mx-2">/</li>
+        <li class="current text-white">Inscription</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+  <section id="inscription" class="contact section py-5">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+      <div class="row gy-4">
+
+        <div class="col-lg-5">
+          <div class="info-item d-flex flex-column shadow-sm" data-aos="fade-up" data-aos-delay="200" style="height: 100%; align-items: flex-start; text-align: left; padding: 30px; border-radius: 15px; background: #fdfcfa; border: 1px solid rgba(111, 66, 193, 0.1);">
+            
+            <div class="mb-4 w-100">
+              <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-calendar-event fs-4 text-primary me-3"></i>
+                <h4 class="mb-0 fw-bold">Dates des sessions</h4>
+              </div>
+              <div class="ms-5 text-muted small fw-bold">
+                {dates.map((date) => (
+                  <p class="mb-1">{date}</p>
+                ))}
+              </div>
+            </div>
+
+            <div class="mb-4 w-100">
+              <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-geo-alt fs-4 text-primary me-3"></i>
+                <h4 class="mb-0 fw-bold">Lieu du parcours</h4>
+              </div>
+              <p class="ms-5 text-muted small">
+                <strong>Houdeng-Gœgnies</strong> (La Louvière)<br>
+                <a target="_blank" href="https://maps.google.com/?q=Rue+Jeanne+Haye+35+7110+Houdeng-Aimeries" class="text-decoration-none text-primary">
+                  Rue Jeanne Haye n°35, 7110 Houdeng-Aimeries
+                </a>
+              </p>
+            </div>
+
+            <hr class="w-100 opacity-10">
+
+            <div class="mb-4 w-100">
+              <div class="d-flex align-items-center mb-2">
+                 <i class="bi bi-shield-check fs-3 text-primary me-3"></i>
+                 <h4 class="mb-0 fw-bold">Prise en charge</h4>
+              </div>
+              <p class="ms-5 small text-muted mb-0">Formation éligible au remboursement <strong>PsyHainaut</strong> (NISS requis).</p>
+            </div>
+
+            <div class="mb-4 w-100">
+              <div class="d-flex align-items-center mb-2">
+                 <i class="bi bi-currency-euro fs-3 text-primary me-3"></i>
+                 <h4 class="mb-0 fw-bold">Tarif préférentiel</h4>
+              </div>
+              <p class="ms-5 small mb-0 text-dark fw-bold" style="font-size: 1.1rem;">
+                2,50€ <span class="text-muted fw-normal" style="font-size: 0.9rem;">/ session</span>
+              </p>
+              <p class="ms-5 small text-muted">Grâce à l'intervention de la convention de soins de première ligne.</p>
+            </div>
+
+            <hr class="w-100 opacity-10">
+
+            <h4 class="mt-2 fw-bold small text-uppercase" style="letter-spacing: 1px;">Détail du parcours :</h4>
+            <ul class="list-unstyled mb-4 small">
+              {modules.map((mod) => (
+                <li class="d-flex align-items-start mb-2">
+                  <i class="bi bi-check2-circle text-primary me-2"></i> 
+                  <span class="text-dark">{mod.name}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mt-auto p-3 w-100" style="background: rgba(111, 66, 193, 0.05); border-radius: 8px; border-left: 4px solid #6f42c1;">
+              <p class="mb-0 small text-muted">
+                <i class="bi bi-info-circle me-2"></i> 
+                <strong>Note :</strong> Après validation, vous recevrez les instructions de paiement par email.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="form-wrapper bg-white shadow-sm p-4 p-md-5 rounded-4 border">
+            <div class="mb-4">
+              <h3 class="fw-bold">Formulaire d'inscription</h3>
+              <p class="text-muted small">Réservation pour la session de Mars 2026.</p>
+            </div>
+
+            <form id="registrationForm">
+              <div class="row gy-3">
+                <div class="col-md-6">
+                  <label class="form-label fw-bold small text-secondary">Nom et Prénom</label>
+                  <input type="text" name="name" class="form-control custom-input" placeholder="Ex: Jean Dupont" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-bold small text-secondary">Email</label>
+                  <input type="email" name="email" class="form-control custom-input" placeholder="Ex: jean@email.be" required>
+                </div>
+
+                <div class="col-md-12">
+                  <label class="form-label fw-bold small text-secondary">Numéro NISS (Registre National)</label>
+                  <input type="text" name="niss" class="form-control custom-input" placeholder="00.00.00-000.00" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-bold small text-secondary">Téléphone</label>
+                  <input type="tel" name="phone" class="form-control custom-input" placeholder="Ex: 0470 00 00 00" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-bold small text-secondary">Vous êtes...</label>
+                  <select name="status" class="form-select custom-input" required>
+                    <option value="" disabled selected>Sélectionnez votre profil</option>
+                    <option value="particulier">Un particulier</option>
+                    <option value="independant">Un indépendant</option>
+                    <option value="entreprise">Une entreprise / salarié</option>
+                  </select>
+                </div>
+
+                <div class="col-md-12">
+                  <label class="form-label fw-bold small text-secondary">Attentes ou questions (Optionnel)</label>
+                  <textarea name="message" class="form-control custom-input" rows="3" placeholder="Qu'attendez-vous de cette formation ?"></textarea>
+                </div>
+
+                <div class="col-md-12 text-center mt-4">
+                  <div id="form-loader" class="alert alert-info py-2" style="display:none;">
+                    <span class="spinner-border spinner-border-sm me-2"></span> Enregistrement en cours...
+                  </div>
+                  <div id="form-success" class="alert alert-success py-3" style="display:none;">
+                    <h5 class="fw-bold mb-1">Inscription transmise !</h5>
+                    <p class="mb-0 small">Merci. Votre demande a bien été envoyée à Michaël Plichart.</p>
+                  </div>
+                  
+                  <button type="submit" id="submitBtn" class="btn btn-primary btn-lg w-100 rounded-pill fw-bold py-3 shadow-sm">
+                    Confirmer mon inscription
+                  </button>
+                  
+                  <p class="mt-3 mb-0 text-muted" style="font-size: 11px;">
+                    <i class="bi bi-lock-fill me-1 text-success"></i> Vos données sont sécurisées et traitées selon le RGPD.
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<script>
+    // 1. On enlève "is:inline" pour qu'Astro puisse injecter la variable .env
+    // 2. On s'assure d'utiliser PUBLIC_GOOGLE_SCRIPT_URL
+    const SCRIPT_URL = import.meta.env.PUBLIC_STRESS_FORMATION_URL;
+
+    const regForm = document.getElementById('registrationForm');
+
+    regForm.addEventListener('submit', e => {
+      e.preventDefault();
+      
+      const btn = document.getElementById('submitBtn');
+      const loader = document.getElementById('form-loader');
+      const successMsg = document.getElementById('form-success');
+
+      btn.disabled = true;
+      btn.style.display = 'none';
+      loader.style.display = 'block';
+
+      // On utilise bien SCRIPT_URL (en majuscules comme défini plus haut)
+      fetch(SCRIPT_URL, { method: 'POST', body: new FormData(regForm)})
+        .then(response => {
+          loader.style.display = 'none';
+          successMsg.style.display = 'block';
+          regForm.reset();
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+          loader.style.display = 'none';
+          btn.style.display = 'block';
+          btn.disabled = false;
+          alert("Une erreur est survenue lors de l'envoi du formulaire.");
+        });
+    });
+  </script>
+
+</Master>
+
+<style>
+  :global(#header) { background: #1a0b33 !important; }
+  .custom-input {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    font-size: 14px;
+  }
+  .custom-input:focus {
+    border-color: #6f42c1;
+    box-shadow: 0 0 0 0.25rem rgba(111, 66, 193, 0.1);
+  }
+  .btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+  }
+
+  /* On force un décalage si le header est présent */
+  :global(body.contact-page) {
+    padding-top: 20px; /* Ajuste selon la hauteur réelle de ta navbar */
+  }
+
+  :global(#header) { 
+    background: #1a0b33 !important; 
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* ... reste de ton style ... */
+  .custom-input {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    font-size: 14px;
+  }
+</style>
