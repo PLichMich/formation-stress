@@ -22,8 +22,14 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
+        
       - name: Build Astro
+        # On injecte les variables configurées dans GitHub juste ici
+        env:
+          PUBLIC_STRESS_FORMATION_URL: ${{ vars.PUBLIC_STRESS_FORMATION_URL }}
+          PUBLIC_CONTACT_SCRIPT_URL: ${{ vars.PUBLIC_CONTACT_SCRIPT_URL }}
         run: npm run build
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
