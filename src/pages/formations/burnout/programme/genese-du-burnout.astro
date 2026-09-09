@@ -1,0 +1,207 @@
+---
+import Master from '../../../../layouts/Master.astro';
+import ShareButtons from '../../../../components/ShareButtons.astro';
+
+const currentUrl = Astro.url.href;
+
+const pointsCles = [
+  {
+    titre: "La courbe de Selye (SGA)",
+    texte: "Comprendre le passage de la phase d'alarme à la résistance, puis à l'épuisement total où les réserves hormonales et énergétiques sont à sec."
+  },
+  {
+    titre: "L'effet grenouille cuite",
+    texte: "Décoder le piège de l'adaptation progressive : comment on s'habitue à un niveau d'inconfort toxique sans déclencher l'alerte à temps."
+  },
+  {
+    titre: "Burn-out vs Dépression",
+    texte: "Distinguer clairement un épuisement d'énergie (le moteur veut mais la batterie est vide) de la dépression classique pour éviter les erreurs d'orientation."
+  },
+  {
+    titre: "Sortir de la culpabilité",
+    texte: "Comprendre que le burn-out touche préférentiellement les personnes investies, consciencieuses et loyales : ce n'est pas une faille personnelle."
+  }
+];
+---
+
+<Master 
+  title="Module 1 : Genèse, symptômes et idées reçues sur le Burn-out | StressAction"
+  description="Démystifiez le burn-out grâce à la physiologie et aux TCC : courbe de Selye, syndrome d'adaptation, effet grenouille et différenciation clinique."
+  image="/assets/img/hero-formation-burnout.jpg"
+>
+  <main class="main">
+
+    <!-- HERO DU MODULE -->
+    <section class="module-hero py-5">
+      <div class="container">
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/formations">Formations</a></li>
+            <li class="breadcrumb-item"><a href="/formations/reellement-comprendre-le-burnout">Comprendre le Burn-out</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Module 1</li>
+          </ol>
+        </nav>
+
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-8">
+            <span class="badge mb-3" style="background: rgba(111, 66, 193, 0.15); color: #6f42c1; border-radius: 50px; padding: 8px 18px; font-weight: 600;">
+              Journée 1 · Socle Fondateur
+            </span>
+            <h1 class="display-5 fw-bold mb-3" style="color: #1a0b33;">
+              Comprendre le Burn-out : Genèse, symptômes et idées reçues
+            </h1>
+            <p class="fs-5 text-muted mb-4">
+              Mettre des mots clairs et scientifiques sur ce que votre corps et votre esprit traversent. Démêler le vrai du faux pour sortir immédiatement de la culpabilité.
+            </p>
+            <div class="mb-3">
+              <ShareButtons 
+                title="Module 1 : Comprendre la genèse du burn-out - StressAction" 
+                url={currentUrl} 
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="/formations/reellement-comprendre-le-burnout#prochaine-session" class="btn btn-primary btn-lg px-4 py-3 fw-bold rounded-pill shadow-sm">
+              S'inscrire à la session
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION CONTENU PÉDAGOGIQUE -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="row gy-5">
+          
+          <!-- COLONNE CONTENU PRINCIPAL -->
+          <div class="col-lg-8">
+            <div class="pe-lg-4">
+              
+              <h2 class="fw-bold mb-4" style="color: #341f97;">Ce que vous allez explorer lors de cette journée</h2>
+              
+              <p class="lead text-secondary">
+                Le burn-out n’arrive jamais du jour au lendemain par hasard. C’est l’aboutissement d’un processus biologique et comportemental précis qu’il est indispensable de décoder pour pouvoir amorcer une vraie reconstruction.
+              </p>
+
+              <div class="my-5 p-4 rounded-4" style="background: #fbf9ff; border-left: 5px solid #6f42c1;">
+                <h4 class="fw-bold mb-3" style="color: #1a0b33;">Pourquoi nous commençons par là :</h4>
+                <p class="mb-0 text-muted">
+                  Tant qu'on pense que le burn-out est une « faiblesse de caractère » ou un simple manque de repos, on applique de mauvais remèdes. En comprenant le fonctionnement neurophysiologique du syndrome général d'adaptation, la culpabilité s'efface pour laisser place à une stratégie de rétablissement concrète.
+                </p>
+              </div>
+
+              <h3 class="fw-bold h4 mb-3 mt-4">1. La physiologie du décrochage : La courbe de Selye</h3>
+              <p>
+                Hans Selye a décrit le <strong>Syndrome Général d'Adaptation (SGA)</strong> :
+              </p>
+              <ul>
+                <li><strong>La phase d'alarme :</strong> Le corps mobilise ses ressources d'urgence (adrénaline, rythme cardiaque accéléré).</li>
+                <li><strong>La phase de résistance :</strong> Pour tenir dans la durée face à la surcharge, l'organisme sécrète du cortisol en continu. On compense, on serre les dents, tout paraît encore sous contrôle.</li>
+                <li><strong>La phase d'épuisement :</strong> Les mécanismes de régulation sont saturés. Les glandes surrénales ne parviennent plus à suivre, le système s'effondre brutalement.</li>
+              </ul>
+
+              <h3 class="fw-bold h4 mb-3 mt-4">2. Le piège de l'adaptation : L'effet grenouille cuite</h3>
+              <p>
+                Plongez une grenouille dans l'eau bouillante, elle saute immédiatement. Mettez-la dans une eau tiède et augmentez la température degré par degré : elle s'adapte jusqu'à s'engourdir et périr sans s'échapper. 
+                En situation professionnelle, nous acceptons chaque mois une petite concession supplémentaire : dix minutes de plus, un mail le soir, un week-end écourté. Nous décortiquerons ce mécanisme d'accoutumance toxique.
+              </p>
+
+              <h3 class="fw-bold h4 mb-3 mt-4">3. La frontière clinique : Burn-out ou Dépression ?</h3>
+              <p>
+                La confusion fréquente entre ces deux états engendre des incompréhensions majeures. Dans le burn-out, la personne a le désir d'agir, mais l'énergie biologique manque cruellement (« Je veux, mais mon corps refuse »). Dans la dépression caractérisée, c'est l'élan vital et le désir lui-même qui s'éteignent (anhédonie globale). Reconnaître ces nuances permet d'adapter précisément le rythme de repos et la reprise.
+              </p>
+
+              <!-- CADRE SÉCURITÉ -->
+              <div class="mt-5 p-4 rounded-4 bg-light border">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-shield-check fs-3 me-2" style="color: #6f42c1;"></i>
+                  <h5 class="fw-bold mb-0">Rappel sur le cadre des ateliers</h5>
+                </div>
+                <p class="small text-muted mb-0">
+                  Comme pour chaque module StressAction, vous n'êtes jamais sollicité pour raconter votre entreprise, vos conflits ou vos détails personnels. Vous êtes là pour comprendre la grille de lecture théorique et repartir avec des repères objectifs.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- COLONNE SIDEBAR / RECAPITULATIF -->
+          <div class="col-lg-4">
+            <div class="sticky-top" style="top: 100px;">
+              
+              <div class="card border-0 shadow-sm rounded-4 p-4 mb-4">
+                <h4 class="fw-bold mb-3" style="color: #1a0b33;">Les 4 piliers du module</h4>
+                <div class="vstack gap-3">
+                  {pointsCles.map((point) => (
+                    <div class="p-3 rounded-3" style="background: #faf8fd;">
+                      <h6 class="fw-bold mb-1" style="color: #6f42c1;">{point.titre}</h6>
+                      <p class="small text-muted mb-0">{point.texte}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <!-- NAVIGATION ENTRE MODULES -->
+              <div class="card border-0 shadow-sm rounded-4 p-4">
+                <h5 class="fw-bold mb-3">Parcours complet</h5>
+                <ul class="list-unstyled mb-0 vstack gap-2 small">
+                  <li class="fw-bold text-primary">→ Module 1 : Genèse & Idées reçues</li>
+                  <li><a href="/formations/reellement-comprendre-le-burnout/programme/pensees-et-ruminations" class="text-decoration-none text-muted">Module 2 : Stopper les ruminations</a></li>
+                  <li><a href="/formations/reellement-comprendre-le-burnout/programme/lacher-prise-et-spheres-de-vie" class="text-decoration-none text-muted">Module 3 : Lâcher-prise & Sphères de vie</a></li>
+                  <li><a href="/formations/reellement-comprendre-le-burnout/programme/neurobiologie-et-relaxation" class="text-decoration-none text-muted">Module 4 : Neurobiologie & Apaisement</a></li>
+                  <li><a href="/formations/reellement-comprendre-le-burnout/programme/reprise-et-prevention" class="text-decoration-none text-muted">Module 5 : Reprise & Limites durables</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BANDEAU CTA BAS DE PAGE -->
+    <section class="py-5 bg-dark text-white text-center">
+      <div class="container">
+        <h3 class="fw-bold text-warning mb-2">Envie de rejoindre le prochain cycle ?</h3>
+        <p class="opacity-75 mb-4">Découvrez les dates des prochaines sessions et réservez votre place en petit groupe.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="/formations/reellement-comprendre-le-burnout" class="btn btn-outline-light px-4 py-2 rounded-pill">
+            ← Revenir à la vue d'ensemble
+          </a>
+          <a href="/formations/reellement-comprendre-le-burnout/programme/pensees-et-ruminations" class="btn btn-primary px-4 py-2 rounded-pill">
+            Module suivant : Le piège des pensées →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Master>
+
+<style>
+  :global(#header) {
+    background: #1a0b33 !important;
+  }
+
+  .module-hero {
+    padding-top: 130px;
+    background: linear-gradient(180deg, rgba(111, 66, 193, 0.06) 0%, #ffffff 100%);
+    border-bottom: 1px solid rgba(111, 66, 193, 0.1);
+  }
+
+  .breadcrumb a {
+    color: #6f42c1;
+    text-decoration: none;
+  }
+
+  .btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+  }
+  .btn-primary:hover {
+    background-color: #59339d;
+    border-color: #59339d;
+  }
+</style>
