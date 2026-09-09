@@ -1,0 +1,261 @@
+---
+import Master from '../../../layouts/Master.astro';
+import ShareButtons from '../../../components/ShareButtons.astro';
+
+const objectifs = [
+  "Comprendre la genèse physiologique et psychologique du burn-out (Courbe de Selye, amygdale)",
+  "Identifier et désamorcer les ruminations et pensées parasites (pensées type 1 vs type 2)",
+  "Sortir du piège de la monoculture et diversifier ses sphères d'épanouissement",
+  "Réguler son système nerveux par la relaxation physiologique (Cohérence cardiaque, Jacobson)",
+  "Bâtir un plan concret de retour au travail sans risque de rechute (affirmation de soi, signaux d'alerte)"
+];
+
+const modules = [
+  { 
+    id: 1, 
+    title: "Comprendre le Burn-out : Genèse, symptômes et idées reçues", 
+    slug: "genese-du-burnout",
+    desc: "Démystifier le burn-out, la courbe de Selye, l'effet grenouille et la distinction avec la dépression."
+  },
+  { 
+    id: 2, 
+    title: "Le piège des pensées : Stopper les ruminations", 
+    slug: "pensees-et-ruminations",
+    desc: "Différencier pensées efficaces et ruminations (type 1 vs type 2) et corriger les distorsions cognitives."
+  },
+  { 
+    id: 3, 
+    title: "L'art du lâcher-prise et les sphères de vie", 
+    slug: "lacher-prise-et-spheres-de-vie",
+    desc: "L'effet parachute, déculpabiliser le repos et sortir du piège de la monoculture professionnelle."
+  },
+  { 
+    id: 4, 
+    title: "Neurobiologie & Apaisement du système nerveux", 
+    slug: "neurobiologie-et-relaxation",
+    desc: "Reprendre la main sur l'amygdale grâce au cortex préfrontal : cohérence cardiaque et méthode Jacobson."
+  },
+  { 
+    id: 5, 
+    title: "Préparer la reprise : Déconditionnement et limites durables", 
+    slug: "reprise-et-prevention",
+    desc: "Protocoles pas-à-pas, scripts d'affirmation de soi et mise en place d'un plan d'urgence anti-rechute."
+  }
+];
+
+// Récupération de l'URL pour le partage
+const currentUrl = Astro.url.href;
+---
+
+<Master 
+  title="Formation : Réellement Comprendre le Burn-out | StressAction" 
+  description="Un parcours de 5 journées basé sur les TCC et les neurosciences pour sortir de l'épuisement, reconstruire ses équilibres de vie et préparer une reprise sereine." 
+  image="/assets/img/hero-formation-comprendre.png"
+>
+  <main class="main">
+
+    <!-- HERO SECTION -->
+    <section class="hero-page d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          
+          <div class="col-lg-6" data-aos="fade-right">
+            <span class="badge mb-3" style="background: rgba(111, 66, 193, 0.1); color: #6f42c1; border-radius: 50px; padding: 8px 18px; border: 1px solid rgba(111, 66, 193, 0.2);">Cycle Spécialisé</span>
+            <h1 class="display-4 fw-bold mb-4" style="color: #1a0b33; line-height: 1.15;">Réellement comprendre et surmonter le Burn-out</h1>
+            <p class="fs-5 text-muted mb-4">
+              Un programme structuré en 5 modules pour désamorcer l'épuisement, restaurer votre énergie et construire un équilibre de vie protecteur et durable.
+            </p>
+
+            <div class="mb-5">
+              <ShareButtons 
+                title="Formation StressAction : Réellement comprendre et surmonter le Burn-out" 
+                url={currentUrl} 
+              />
+            </div>
+
+            <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+              <a href="#programme" class="btn btn-primary btn-lg px-4 py-3 fw-bold rounded-pill">Explorer le programme</a>
+              <a href="#prochaine-session" class="btn btn-outline-secondary btn-lg px-4 py-3 fw-bold rounded-pill">Dates & Inscription</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="hero-image-wrapper p-3 bg-white shadow-lg rounded-4">
+              <img src="/assets/img/hero-formation-comprendre.png" alt="Programme de rétablissement du burn-out StressAction" class="img-fluid rounded-3">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION CADRE DE SECURITE (RASSURANCE) -->
+    <section class="py-4 bg-white border-bottom">
+      <div class="container">
+        <div class="p-4 rounded-4 shadow-sm text-white" style="background: linear-gradient(135deg, #6f42c1 0%, #4e2b8a 100%);">
+          <div class="row align-items-center">
+            <div class="col-md-1 text-center mb-3 mb-md-0">
+              <i class="bi bi-shield-check fs-1"></i>
+            </div>
+            <div class="col-md-11">
+              <h5 class="fw-bold mb-1">Un atelier d'outillage, pas un déballage émotionnel</h5>
+              <p class="mb-0 small opacity-90">
+                Vous n'avez aucune obligation de dévoiler votre intimité ou de raconter votre situation professionnelle en détail. Nous travaillons sur la compréhension scientifique des mécanismes, la pratique d'outils concrets et l'acquisition de compétences protectrices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBJECTIFS & PHILOSOPHIE -->
+    <section id="objectifs" class="py-5 bg-white">
+      <div class="container py-4">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <h2 class="fw-bold mb-4" style="color: #341f97;">Ne pas attendre d'aller mieux pour commencer à bien vivre</h2>
+            <p class="fs-5 text-muted italic">
+              "Le burn-out n'est pas un signe de faiblesse : c'est un signal d'alarme qui indique qu'un mode de vie antérieur n'était plus tenable."
+            </p>
+            <p>
+              Le piège le plus fréquent est de croire qu'il suffit d'attendre passivement la fin de l'arrêt. Cette formation psycho-éducative vous donne les clés pour agir immédiatement sur vos ruminations, restaurer votre physiologie et diversifier vos sources de sens afin d'amortir les chocs de l'existence.
+            </p>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="objectifs-box p-4 rounded-4" style="background: #fdfcfa; border-left: 5px solid #6f42c1; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
+              <h4 class="fw-bold mb-3">Objectifs clés de la formation :</h4>
+              <ul class="list-unstyled mb-0">
+                {objectifs.map(obj => (
+                  <li class="mb-3 d-flex align-items-start text-dark">
+                    <i class="bi bi-check-circle-fill me-3 mt-1" style="color: #6f42c1;"></i>
+                    <span>{obj}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMME DETAILLE -->
+    <section id="programme" class="py-5 bg-light">
+      <div class="container text-center mb-5">
+        <h2 class="fw-bold">Le parcours en 5 étapes</h2>
+        <p class="text-muted">Un cheminement logique, de la compréhension biologique jusqu'à la reprise sécurisée</p>
+        <div class="divider mx-auto"></div>
+      </div>
+      <div class="container">
+        <div class="row g-4">
+          {modules.map((mod) => (
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+              <div class="card h-100 border-0 shadow-sm p-4 text-center hover-card">
+                <div class="module-number mx-auto mb-3">{mod.id}</div>
+                <h5 class="fw-bold">{mod.title}</h5>
+                <p class="small text-muted mb-3">{mod.desc}</p>
+                <a href={`/formations/reellement-comprendre-le-burnout/programme/${mod.slug}`} class="stretched-link text-decoration-none text-primary mt-auto d-block small fw-bold">Détails du module →</a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION SESSION / APPEL A L'ACTION -->
+    <section id="prochaine-session" class="py-5 bg-dark text-white text-center">
+      <div class="container">
+        <h3 class="text-warning mb-2">Prochain cycle d'ateliers</h3>
+        <p class="opacity-75 mb-4">Centre thérapeutique Les Oranges — Rue Joseph Wauters n°191, Péronnes-lez-Binche</p>
+        
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+          <a href="/formations/reellement-comprendre-le-burnout/sessions/session-a-venir" 
+             class="btn btn-primary btn-lg px-4">
+            Consulter les dates & s'inscrire
+          </a>
+
+          <a href="/formations/reellement-comprendre-le-burnout/liste-attente" 
+             class="btn btn-outline-light btn-lg px-4">
+            Rejoindre la liste d'attente
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Master>
+
+<style>
+  :global(#header) {
+    background: #1a0b33 !important;
+  }
+
+  .hero-page {
+    padding-top: 140px;
+    padding-bottom: 80px;
+    min-height: 80vh;
+    background: linear-gradient(180deg, rgba(111, 66, 193, 0.05) 0%, #fffbf2 100%);
+    border-bottom: 1px solid rgba(111, 66, 193, 0.1);
+  }
+
+  .hero-image-wrapper {
+    box-shadow: 0 15px 40px rgba(111, 66, 193, 0.1);
+  }
+
+  .btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+  }
+  .btn-primary:hover {
+    background-color: #59339d;
+    border-color: #59339d;
+  }
+
+  .module-number {
+    width: 50px;
+    height: 50px;
+    background: #6f42c1;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .hover-card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  .hover-card:hover {
+    transform: translateY(-8px);
+    background: #6f42c1;
+    color: white;
+  }
+  .hover-card:hover .text-muted { color: rgba(255, 255, 255, 0.8) !important; }
+  .hover-card:hover a { color: white !important; }
+
+  .divider {
+    width: 60px;
+    height: 4px;
+    background: #6f42c1;
+    border-radius: 2px;
+  }
+
+  .hover-card:hover .module-number {
+    background: white;
+    color: #6f42c1;
+  }
+
+  .italic {
+    font-style: italic;
+    border-left: 3px solid #dee2e6;
+    padding-left: 15px;
+  }
+  .opacity-90 {
+    opacity: 0.9;
+  }
+</style>
