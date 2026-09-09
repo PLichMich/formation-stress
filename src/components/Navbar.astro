@@ -24,6 +24,7 @@ const currentPath = pathname.replace(/\/$/, "") || "/";
             <li><a href="/formations">Nos Ateliers</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a href="/formations/comprendre-le-stress">Comprendre le stress</a></li>
+            <li><a href="/formations/burnout">Comprendre le burnout</a></li>
           </ul>
         </li>
 
@@ -54,6 +55,11 @@ const currentPath = pathname.replace(/\/$/, "") || "/";
 </header>
 
 <style>
+  /* FIXATION PRIORITÉ VISUELLE NAVBAR */
+  #header {
+    z-index: 1030 !important;
+  }
+
   /* STYLES DU LOGO TEXTUEL */
   .logo-text-stress {
     font-size: 24px;
@@ -70,7 +76,6 @@ const currentPath = pathname.replace(/\/$/, "") || "/";
   }
 
   /* GESTION DU LOGO SUR LES PAGES À FOND SOMBRE */
-  /* On inclut ici les nouvelles pages de formation pour que le logo soit blanc au début */
   :global(.index-page, .professionnels-page, .equipe-page, .contact-page, .formation-page) #header:not(.scrolled) .logo-text-stress,
   :global(.index-page, .professionnels-page, .equipe-page, .contact-page, .formation-page) #header:not(.scrolled) .logo-text-action {
     color: #ffffff !important;
