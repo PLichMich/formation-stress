@@ -128,7 +128,7 @@ const pointsCles = [
 
           <!-- COLONNE SIDEBAR / RECAPITULATIF -->
           <div class="col-lg-4">
-            <div class="sticky-top" style="top: 100px;">
+            <div class="sidebar-sticky">
               
               <div class="card border-0 shadow-sm rounded-4 p-4 mb-4">
                 <h4 class="fw-bold mb-3" style="color: #1a0b33;">Les 4 piliers du module</h4>
@@ -183,6 +183,14 @@ const pointsCles = [
 <style>
   :global(#header) {
     background: #1a0b33 !important;
+    z-index: 1030 !important; /* Garantit que la navbar reste toujours au premier plan */
+  }
+
+  /* Correction de la barre latérale sticky */
+  .sidebar-sticky {
+    position: sticky;
+    top: 110px; /* Décalage suffisant sous la navbar */
+    z-index: 10; /* Inférieur à la navbar (1030) */
   }
 
   .module-hero {
