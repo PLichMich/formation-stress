@@ -1,0 +1,218 @@
+---
+import Master from '../../../../layouts/Master.astro';
+import ShareButtons from '../../../../components/ShareButtons.astro';
+
+const currentUrl = Astro.url.href;
+
+const pointsCles = [
+  {
+    titre: "Amygdale vs Préfrontal",
+    texte: "Comprendre le piratage neurobiologique : pourquoi la fatigue chronique désactive nos capacités de recul et d'analyse."
+  },
+  {
+    titre: "Accélérateur & Frein",
+    texte: "Découvrir la balance du système nerveux autonome et identifier pourquoi le frein parasympathique ne répond plus."
+  },
+  {
+    titre: "Cohérence cardiaque",
+    texte: "Utiliser la fréquence respiratoire pour envoyer un signal physiologique direct de sécurité au cœur et au cerveau."
+  },
+  {
+    titre: "Méthode Jacobson",
+    texte: "Expérimenter le relâchement musculaire différentiel pour briser l'armure physique de tension accumulée."
+  }
+];
+---
+
+<Master 
+  title="Module 4 : Neurobiologie & Apaisement du système nerveux | StressAction"
+  description="Découvrez comment reprendre la main sur une amygdale en alerte et réactiver le frein parasympathique grâce à la cohérence cardiaque et à la méthode Jacobson."
+  image="/assets/img/hero-formation-burnout.png"
+>
+  <main class="main">
+
+    <!-- HERO DU MODULE -->
+    <section class="module-hero py-5">
+      <div class="container">
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/formations">Formations</a></li>
+            <li class="breadcrumb-item"><a href="/formations/burnout">Comprendre le Burn-out</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Module 4</li>
+          </ol>
+        </nav>
+
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-8">
+            <span class="badge mb-3" style="background: rgba(111, 66, 193, 0.15); color: #6f42c1; border-radius: 50px; padding: 8px 18px; font-weight: 600;">
+              Journée 4 · Physiologie & Régulation
+            </span>
+            <h1 class="display-5 fw-bold mb-3" style="color: #1a0b33;">
+              Neurobiologie & Apaisement du système nerveux
+            </h1>
+            <p class="fs-5 text-muted mb-4">
+              Agir directement là où les mots ne suffisent plus : réguler le système nerveux autonome, calmer l'alerte cérébrale et réinstaller le calme physiologique.
+            </p>
+            <div class="mb-3">
+              <ShareButtons 
+                title="Module 4 : Neurobiologie et apaisement du système nerveux - StressAction" 
+                url={currentUrl} 
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="/formations/burnout#prochaine-session" class="btn btn-primary btn-lg px-4 py-3 fw-bold rounded-pill shadow-sm">
+              S'inscrire à la session
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION CONTENU PÉDAGOGIQUE -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="row gy-5">
+          
+          <!-- COLONNE CONTENU PRINCIPAL -->
+          <div class="col-lg-8">
+            <div class="pe-lg-4">
+              
+              <h2 class="fw-bold mb-4" style="color: #341f97;">Quand la volonté ne suffit plus à calmer le corps</h2>
+              
+              <p class="lead text-secondary">
+                Se dire « calme-toi » quand le système nerveux est en surchauffe ne fonctionne jamais. Pour apaiser une alerte neurochimique tenace, il faut parler le langage que le corps comprend : le souffle, le rythme cardiaque et le tonus musculaire.
+              </p>
+
+              <div class="my-5 p-4 rounded-4" style="background: #fbf9ff; border-left: 5px solid #6f42c1;">
+                <h4 class="fw-bold mb-3" style="color: #1a0b33;">Le piratage de l'amygdale :</h4>
+                <p class="mb-0 text-muted">
+                  En état d'épuisement, l'amygdale cérébrale (notre détecteur de danger) devient hyper-réactive et sonne l'alarme en permanence. Le cortex préfrontal, siège du raisonnement et du discernement, manque de carburant pour la réguler. Durant cet atelier, nous activons la communication « de bas en haut » (bottom-up) : passer par le corps pour apaiser le cerveau.
+                </p>
+              </div>
+
+              <h3 class="fw-bold h4 mb-3 mt-4">1. La bascule du système nerveux autonome</h3>
+              <p>
+                Notre système nerveux fonctionne avec deux pédales :
+              </p>
+              <ul>
+                <li><strong>La branche sympathique (l'accélérateur) :</strong> Mobilise l'énergie, élève la tension et prépare au combat ou à la fuite. Dans le burn-out, cette pédale est restée bloquée au plancher pendant des mois.</li>
+                <li><strong>La branche parasympathique (le frein) :</strong> Pilote la digestion, la récupération cellulaire et le sommeil réparateur via le nerf vague.</li>
+              </ul>
+              <p>
+                Nous verrons comment réengager activement ce frein lorsque le réflexe naturel de récupération s'est grippé.
+              </p>
+
+              <h3 class="fw-bold h4 mb-3 mt-4">2. La cohérence cardiaque : le signal du nerf vague</h3>
+              <p>
+                Le cœur et le cerveau dialoguent en permanence, et 80% des informations remontent du cœur vers le cerveau. Par un protocole respiratoire spécifique à fréquence fixe, nous harmonisons la variabilité cardiaque. Ce rythme envoie un signal immédiat et indiscutable à l'amygdale : <em>« Le danger immédiat est écarté, tu peux abaisser la garde. »</em>
+              </p>
+
+              <h3 class="fw-bold h4 mb-3 mt-4">3. La désactivation musculaire : La méthode Jacobson</h3>
+              <p>
+                L'anxiété chronique fige le corps dans une armure de tensions permanentes (épaules contractées, mâchoires serrées, respiration courte). Cette crispation physique renvoie en retour un signal de détresse au cerveau.
+              </p>
+              <p>
+                La relaxation progressive de Jacobson repose sur un principe physiologique éprouvé : la phase de contraction volontaire suivie d'un relâchement profond permet d'atteindre un niveau de détente musculaire impossible à obtenir par la seule volonté passive.
+              </p>
+
+              <!-- CADRE SÉCURITÉ -->
+              <div class="mt-5 p-4 rounded-4 bg-light border">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-shield-check fs-3 me-2" style="color: #6f42c1;"></i>
+                  <h5 class="fw-bold mb-0">Un apprentissage pratique en atelier</h5>
+                </div>
+                <p class="small text-muted mb-0">
+                  Loin des approches ésotériques, ces techniques sont enseignées comme des outils d'hygiène physiologique quotidiens. Les exercices sont guidés en douceur, assis sur chaise, sans tenue spécifique requise.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- COLONNE SIDEBAR / RECAPITULATIF -->
+          <div class="col-lg-4">
+            <div class="sidebar-sticky">
+              
+              <div class="card border-0 shadow-sm rounded-4 p-4 mb-4">
+                <h4 class="fw-bold mb-3" style="color: #1a0b33;">Les 4 piliers du module</h4>
+                <div class="vstack gap-3">
+                  {pointsCles.map((point) => (
+                    <div class="p-3 rounded-3" style="background: #faf8fd;">
+                      <h6 class="fw-bold mb-1" style="color: #6f42c1;">{point.titre}</h6>
+                      <p class="small text-muted mb-0">{point.texte}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <!-- NAVIGATION ENTRE MODULES -->
+              <div class="card border-0 shadow-sm rounded-4 p-4">
+                <h5 class="fw-bold mb-3">Parcours complet</h5>
+                <ul class="list-unstyled mb-0 vstack gap-2 small">
+                  <li><a href="/formations/burnout/programme/genese-du-burnout" class="text-decoration-none text-muted">Module 1 : Genèse & Idées reçues</a></li>
+                  <li><a href="/formations/burnout/programme/pensees-et-ruminations" class="text-decoration-none text-muted">Module 2 : Stopper les ruminations</a></li>
+                  <li><a href="/formations/burnout/programme/lacher-prise-et-spheres-de-vie" class="text-decoration-none text-muted">Module 3 : Lâcher-prise & Sphères de vie</a></li>
+                  <li class="fw-bold text-primary">→ Module 4 : Neurobiologie & Apaisement</li>
+                  <li><a href="/formations/burnout/programme/reprise-et-prevention" class="text-decoration-none text-muted">Module 5 : Reprise & Limites durables</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BANDEAU CTA BAS DE PAGE -->
+    <section class="py-5 bg-dark text-white text-center">
+      <div class="container">
+        <h3 class="fw-bold text-warning mb-2">Poursuivre vers l'ultime étape</h3>
+        <p class="opacity-75 mb-4">Construisez un plan de reprise sécurisé, posez vos limites et prémunissez-vous contre les rechutes.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="/formations/burnout/programme/lacher-prise-et-spheres-de-vie" class="btn btn-outline-light px-4 py-2 rounded-pill">
+            ← Module précédent : Lâcher-prise & Sphères de vie
+          </a>
+          <a href="/formations/burnout/programme/reprise-et-prevention" class="btn btn-primary px-4 py-2 rounded-pill">
+            Module suivant : Reprise & Prévention durable →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Master>
+
+<style>
+  :global(#header) {
+    background: #1a0b33 !important;
+    z-index: 1030 !important;
+  }
+
+  .sidebar-sticky {
+    position: sticky;
+    top: 110px;
+    z-index: 10;
+  }
+
+  .module-hero {
+    padding-top: 130px;
+    background: linear-gradient(180deg, rgba(111, 66, 193, 0.06) 0%, #ffffff 100%);
+    border-bottom: 1px solid rgba(111, 66, 193, 0.1);
+  }
+
+  .breadcrumb a {
+    color: #6f42c1;
+    text-decoration: none;
+  }
+
+  .btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+  }
+  .btn-primary:hover {
+    background-color: #59339d;
+    border-color: #59339d;
+  }
+</style>

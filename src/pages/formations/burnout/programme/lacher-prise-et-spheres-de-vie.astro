@@ -1,0 +1,216 @@
+---
+import Master from '../../../../layouts/Master.astro';
+import ShareButtons from '../../../../components/ShareButtons.astro';
+
+const currentUrl = Astro.url.href;
+
+const pointsCles = [
+  {
+    titre: "L'effet parachute",
+    texte: "Comprendre pourquoi forcer le contrôle précipite la chute, et comment le lâcher-prise volontaire déploie la sécurité."
+  },
+  {
+    titre: "Déculpabiliser le repos",
+    texte: "Intégrer le temps d'arrêt comme un impératif biologique de recharge cellulaire, et non comme un manque de volonté."
+  },
+  {
+    titre: "Le piège de la monoculture",
+    texte: "Identifier le risque d'avoir placé l'ensemble de son identité et de sa valeur dans l'unique panier professionnel."
+  },
+  {
+    titre: "Rééquilibrer les sphères",
+    texte: "Cartographier et réactiver progressivement les autres domaines de vie pour bâtir un amortisseur d'estime de soi solide."
+  }
+];
+---
+
+<Master 
+  title="Module 3 : L'art du lâcher-prise et les sphères de vie | StressAction"
+  description="Désamorcez l'hypercontrôle et le piège de la monoculture professionnelle grâce à l'effet parachute et à la diversification des domaines de vie."
+  image="/assets/img/hero-formation-burnout.png"
+>
+  <main class="main">
+
+    <!-- HERO DU MODULE -->
+    <section class="module-hero py-5">
+      <div class="container">
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/formations">Formations</a></li>
+            <li class="breadcrumb-item"><a href="/formations/burnout">Comprendre le Burn-out</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Module 3</li>
+          </ol>
+        </nav>
+
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-8">
+            <span class="badge mb-3" style="background: rgba(111, 66, 193, 0.15); color: #6f42c1; border-radius: 50px; padding: 8px 18px; font-weight: 600;">
+              Journée 3 · Comportement & Équilibres
+            </span>
+            <h1 class="display-5 fw-bold mb-3" style="color: #1a0b33;">
+              L'art du lâcher-prise et les sphères de vie
+            </h1>
+            <p class="fs-5 text-muted mb-4">
+              Sortir de l'illusion de l'hypercontrôle, s'autoriser un repos sans culpabilité et reconstruire une identité plurielle au-delà du travail.
+            </p>
+            <div class="mb-3">
+              <ShareButtons 
+                title="Module 3 : L'art du lâcher-prise et les sphères de vie - StressAction" 
+                url={currentUrl} 
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="/formations/burnout#prochaine-session" class="btn btn-primary btn-lg px-4 py-3 fw-bold rounded-pill shadow-sm">
+              S'inscrire à la session
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION CONTENU PÉDAGOGIQUE -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="row gy-5">
+          
+          <!-- COLONNE CONTENU PRINCIPAL -->
+          <div class="col-lg-8">
+            <div class="pe-lg-4">
+              
+              <h2 class="fw-bold mb-4" style="color: #341f97;">Cesser de ramer contre le courant de l'épuisement</h2>
+              
+              <p class="lead text-secondary">
+                Quand le burn-out frappe, le réflexe spontané est souvent de redoubler d'efforts pour compenser la baisse d'efficacité. Ce sursaut d'hypercontrôle accélère la casse. Ce module apprend à poser les rames pour ouvrir la voile de récupération.
+              </p>
+
+              <div class="my-5 p-4 rounded-4" style="background: #fbf9ff; border-left: 5px solid #6f42c1;">
+                <h4 class="fw-bold mb-3" style="color: #1a0b33;">La métaphore du parachute :</h4>
+                <p class="mb-0 text-muted">
+                  Tant que le parachutiste s'agite et garde les bras crispés pour freiner sa chute avec ses mains, il tombe à pic. Lâcher prise ne veut pas dire abandonner ou démissionner : cela veut dire cesser une action inefficace pour permettre au mécanisme de sauvetage de se déployer.
+                </p>
+              </div>
+
+              <h3 class="fw-bold h4 mb-3 mt-4">1. La déculpabilisation active du repos</h3>
+              <p>
+                Pour une personnalité investie, l'inactivité forcée est souvent vécue comme une torture morale (« Je ne sers à rien », « Les autres trinquent pour moi »). 
+                Nous étudions la physiologie de la convalescence : le repos n'est pas une récompense qu'on s'accorde quand tout est terminé, c'est l'acte thérapeutique central qui permet aux récepteurs neuronaux et hormonaux de se recalibrer.
+              </p>
+
+              <h3 class="fw-bold h4 mb-3 mt-4">2. Sortir de la « monoculture » existentielle</h3>
+              <p>
+                En agriculture, une monoculture est vulnérable : si un parasite s'attaque au blé, tout le champ est dévasté. 
+                Dans le parcours vers le burn-out, la sphère professionnelle finit souvent par absorber tout le temps, l'attention et l'estime de soi. Le jour où ce pilier vacille, l'individu a le sentiment que sa vie entière s'effondre.
+              </p>
+
+              <h3 class="fw-bold h4 mb-3 mt-4">3. La cartographie des paniers d'investissement</h3>
+              <p>
+                Ne pas mettre tous ses œufs dans le même panier n'est pas un slogan, c'est une stratégie de protection clinique. Lors de cet atelier, nous appliquons un outil d'audit personnel :
+              </p>
+              <ul>
+                <li><strong>Le panier professionnel :</strong> Ajuster sa juste place sans lui confier la totalité de sa valeur personnelle.</li>
+                <li><strong>Le panier corporel & vitalité :</strong> Sommeil, alimentation, mouvement non axé sur la performance.</li>
+                <li><strong>Le panier relationnel & affectif :</strong> Nourrir les liens qui font du bien et assainir les sollicitations toxiques.</li>
+                <li><strong>Le panier passion & créativité :</strong> Retrouver des activités gratuites, sans objectif de rentabilité ni de résultat.</li>
+              </ul>
+
+              <!-- CADRE SÉCURITÉ -->
+              <div class="mt-5 p-4 rounded-4 bg-light border">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-shield-check fs-3 me-2" style="color: #6f42c1;"></i>
+                  <h5 class="fw-bold mb-0">Rappel sur le cadre des ateliers</h5>
+                </div>
+                <p class="small text-muted mb-0">
+                  L'exploration de vos sphères de vie s'effectue sur vos fiches de travail individuelles. Chacun choisit en toute liberté son niveau de partage au sein du groupe, toujours guidé par le respect et la confidentialité.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- COLONNE SIDEBAR / RECAPITULATIF -->
+          <div class="col-lg-4">
+            <div class="sidebar-sticky">
+              
+              <div class="card border-0 shadow-sm rounded-4 p-4 mb-4">
+                <h4 class="fw-bold mb-3" style="color: #1a0b33;">Les 4 piliers du module</h4>
+                <div class="vstack gap-3">
+                  {pointsCles.map((point) => (
+                    <div class="p-3 rounded-3" style="background: #faf8fd;">
+                      <h6 class="fw-bold mb-1" style="color: #6f42c1;">{point.titre}</h6>
+                      <p class="small text-muted mb-0">{point.texte}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <!-- NAVIGATION ENTRE MODULES -->
+              <div class="card border-0 shadow-sm rounded-4 p-4">
+                <h5 class="fw-bold mb-3">Parcours complet</h5>
+                <ul class="list-unstyled mb-0 vstack gap-2 small">
+                  <li><a href="/formations/burnout/programme/genese-du-burnout" class="text-decoration-none text-muted">Module 1 : Genèse & Idées reçues</a></li>
+                  <li><a href="/formations/burnout/programme/pensees-et-ruminations" class="text-decoration-none text-muted">Module 2 : Stopper les ruminations</a></li>
+                  <li class="fw-bold text-primary">→ Module 3 : Lâcher-prise & Sphères de vie</li>
+                  <li><a href="/formations/burnout/programme/neurobiologie-et-relaxation" class="text-decoration-none text-muted">Module 4 : Neurobiologie & Apaisement</a></li>
+                  <li><a href="/formations/burnout/programme/reprise-et-prevention" class="text-decoration-none text-muted">Module 5 : Reprise & Limites durables</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BANDEAU CTA BAS DE PAGE -->
+    <section class="py-5 bg-dark text-white text-center">
+      <div class="container">
+        <h3 class="fw-bold text-warning mb-2">Poursuivre la découverte du parcours</h3>
+        <p class="opacity-75 mb-4">Découvrez comment réguler directement le système nerveux autonome et apaiser l'amygdale cérébrale.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="/formations/burnout/programme/pensees-et-ruminations" class="btn btn-outline-light px-4 py-2 rounded-pill">
+            ← Module précédent : Le piège des pensées
+          </a>
+          <a href="/formations/burnout/programme/neurobiologie-et-relaxation" class="btn btn-primary px-4 py-2 rounded-pill">
+            Module suivant : Neurobiologie & Apaisement →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Master>
+
+<style>
+  :global(#header) {
+    background: #1a0b33 !important;
+    z-index: 1030 !important;
+  }
+
+  .sidebar-sticky {
+    position: sticky;
+    top: 110px;
+    z-index: 10;
+  }
+
+  .module-hero {
+    padding-top: 130px;
+    background: linear-gradient(180deg, rgba(111, 66, 193, 0.06) 0%, #ffffff 100%);
+    border-bottom: 1px solid rgba(111, 66, 193, 0.1);
+  }
+
+  .breadcrumb a {
+    color: #6f42c1;
+    text-decoration: none;
+  }
+
+  .btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+  }
+  .btn-primary:hover {
+    background-color: #59339d;
+    border-color: #59339d;
+  }
+</style>

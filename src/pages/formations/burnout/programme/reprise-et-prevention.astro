@@ -1,0 +1,224 @@
+---
+import Master from '../../../../layouts/Master.astro';
+import ShareButtons from '../../../../components/ShareButtons.astro';
+
+const currentUrl = Astro.url.href;
+
+const pointsCles = [
+  {
+    titre: "Désensibilisation & Déconditionnement",
+    texte: "Désarmer l'angoisse liée aux stimuli du travail (mails, badge, trajet, sonneries) par une approche progressive et sécurisée."
+  },
+  {
+    titre: "L'affirmation de soi & Limites",
+    texte: "Intégrer les scripts de communication assertive pour refuser la surcharge sans culpabilité ni agressivité."
+  },
+  {
+    titre: "Le plan de reprise négocié",
+    texte: "Structurer un cadre protecteur pour le retour : rythme échelonné, gestion de la charge et réajustement des attentes."
+  },
+  {
+    titre: "La checklist anti-rechute",
+    texte: "Identifier ses signaux d'alerte corporels et comportementaux pour actionner un plan de repli dès les premiers dérapages."
+  }
+];
+---
+
+<Master 
+  title="Module 5 : Préparer la reprise, déconditionnement et limites durables | StressAction"
+  description="Préparez un retour professionnel serein et sécurisé grâce aux TCC : désensibilisation, assertivité, pose de limites fermes et plan d'urgence anti-rechute."
+  image="/assets/img/hero-formation-burnout.png"
+>
+  <main class="main">
+
+    <!-- HERO DU MODULE -->
+    <section class="module-hero py-5">
+      <div class="container">
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/formations">Formations</a></li>
+            <li class="breadcrumb-item"><a href="/formations/burnout">Comprendre le Burn-out</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Module 5</li>
+          </ol>
+        </nav>
+
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-8">
+            <span class="badge mb-3" style="background: rgba(111, 66, 193, 0.15); color: #6f42c1; border-radius: 50px; padding: 8px 18px; font-weight: 600;">
+              Journée 5 · Action & Pérennité
+            </span>
+            <h1 class="display-5 fw-bold mb-3" style="color: #1a0b33;">
+              Préparer la reprise : Déconditionnement et limites durables
+            </h1>
+            <p class="fs-5 text-muted mb-4">
+              Sécuriser durablement l'avenir. Transformer les apprentissages en réflexes protecteurs pour reprendre sereinement sans répéter les schémas d'épuisement.
+            </p>
+            <div class="mb-3">
+              <ShareButtons 
+                title="Module 5 : Préparer la reprise et prévenir la rechute - StressAction" 
+                url={currentUrl} 
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="/formations/burnout#prochaine-session" class="btn btn-primary btn-lg px-4 py-3 fw-bold rounded-pill shadow-sm">
+              S'inscrire à la session
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION CONTENU PÉDAGOGIQUE -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="row gy-5">
+          
+          <!-- COLONNE CONTENU PRINCIPAL -->
+          <div class="col-lg-8">
+            <div class="pe-lg-4">
+              
+              <h2 class="fw-bold mb-4" style="color: #341f97;">Ne pas reprendre le travail à l'identique</h2>
+              
+              <p class="lead text-secondary">
+                La plus grande hantise après un burn-out est de retomber dans le même piège quelques semaines après la reprise. Revenir au travail ne signifie pas « reprendre comme avant », mais réintégrer son activité avec une posture radicalement neuve et outillée.
+              </p>
+
+              <div class="my-5 p-4 rounded-4" style="background: #fbf9ff; border-left: 5px solid #6f42c1;">
+                <h4 class="fw-bold mb-3" style="color: #1a0b33;">Le déconditionnement émotionnel :</h4>
+                <p class="mb-0 text-muted">
+                  Après des mois d'arrêt, l'environnement professionnel (ouvrir l'ordinateur portable, franchir la porte des bureaux, croiser certains collègues) déclenche des réflexes conditionnés de panique ou de tétanie. Nous travaillons sur une désensibilisation par paliers pour désamorcer ces déclencheurs avant le premier jour.
+                </p>
+              </div>
+
+              <h3 class="fw-bold h4 mb-3 mt-4">1. L'art de poser ses limites : L'assertivité au quotidien</h3>
+              <p>
+                Dire non est une compétence qui s'apprend et s'entraîne. Beaucoup craignent que refuser une tâche soit perçu comme un manque de professionnalisme. 
+                Durant cette journée, nous abordons la mécanique de l'affirmation de soi :
+              </p>
+              <ul>
+                <li>Distinguer l'affirmation de soi de l'agressivité ou de la passivité.</li>
+                <li>Utiliser des formules claires et factuelles pour négocier les délais sans entrer dans des justifications personnelles embarrassantes.</li>
+                <li>Cesser de se sentir coupable face aux attentes déraisonnables de l'environnement.</li>
+              </ul>
+
+              <h3 class="fw-bold h4 mb-3 mt-4">2. Bâtir le protocole de reprise progressive</h3>
+              <p>
+                Un retour réussi est un retour préparé sur le plan stratégique :
+              </p>
+              <ul>
+                <li><strong>Le cadrage temporel :</strong> Définir des plages fermes de déconnexion et sanctuariser les temps de pause dès la première semaine.</li>
+                <li><strong>La sélection des priorités :</strong> Appliquer des filtres objectifs pour trier l'urgent de l'accessoire sans se laisser submerger par la masse de retard accumulé.</li>
+                <li><strong>Le dialogue avec le médecin du travail et l'employeur :</strong> Préparer les entretiens clés pour fixer des conditions réalistes.</li>
+              </ul>
+
+              <h3 class="fw-bold h4 mb-3 mt-4">3. Le tableau de bord personnel & plan anti-rechute</h3>
+              <p>
+                Le burn-out envoie toujours des signaux d'alerte avant l'effondrement, mais nous avons appris à les ignorer. Chaque participant repart avec sa propre <strong>grille de vigilance</strong> :
+              </p>
+              <ul>
+                <li><strong>Signaux de niveau 1 (orange) :</strong> Reprise des ruminations au coucher, saut d'un repas, tensions cervicales récurrentes.</li>
+                <li><strong>Signaux de niveau 2 (rouge) :</strong> Sentiment d'urgence permanent, irritabilité avec les proches, abandon des temps de récupération.</li>
+                <li><strong>Le protocole de repli d'urgence :</strong> Les actions automatiques et non négociables à déclencher dès qu'un voyant s'allume pour stopper net l'engrenage.</li>
+              </ul>
+
+              <!-- CADRE SÉCURITÉ -->
+              <div class="mt-5 p-4 rounded-4 bg-light border">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-shield-check fs-3 me-2" style="color: #6f42c1;"></i>
+                  <h5 class="fw-bold mb-0">Devenir son propre garant de santé</h5>
+                </div>
+                <p class="small text-muted mb-0">
+                  L'objectif ultime de ces 5 journées n'est pas de créer une dépendance à un accompagnement, mais de vous rendre totalement autonome, lucide et confiant dans votre capacité à protéger votre écologie personnelle sur le long terme.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- COLONNE SIDEBAR / RECAPITULATIF -->
+          <div class="col-lg-4">
+            <div class="sidebar-sticky">
+              
+              <div class="card border-0 shadow-sm rounded-4 p-4 mb-4">
+                <h4 class="fw-bold mb-3" style="color: #1a0b33;">Les 4 piliers du module</h4>
+                <div class="vstack gap-3">
+                  {pointsCles.map((point) => (
+                    <div class="p-3 rounded-3" style="background: #faf8fd;">
+                      <h6 class="fw-bold mb-1" style="color: #6f42c1;">{point.titre}</h6>
+                      <p class="small text-muted mb-0">{point.texte}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <!-- NAVIGATION ENTRE MODULES -->
+              <div class="card border-0 shadow-sm rounded-4 p-4">
+                <h5 class="fw-bold mb-3">Parcours complet</h5>
+                <ul class="list-unstyled mb-0 vstack gap-2 small">
+                  <li><a href="/formations/burnout/programme/genese-du-burnout" class="text-decoration-none text-muted">Module 1 : Genèse & Idées reçues</a></li>
+                  <li><a href="/formations/burnout/programme/pensees-et-ruminations" class="text-decoration-none text-muted">Module 2 : Stopper les ruminations</a></li>
+                  <li><a href="/formations/burnout/programme/lacher-prise-et-spheres-de-vie" class="text-decoration-none text-muted">Module 3 : Lâcher-prise & Sphères de vie</a></li>
+                  <li><a href="/formations/burnout/programme/neurobiologie-et-relaxation" class="text-decoration-none text-muted">Module 4 : Neurobiologie & Apaisement</a></li>
+                  <li class="fw-bold text-primary">→ Module 5 : Reprise & Limites durables</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BANDEAU CTA BAS DE PAGE -->
+    <section class="py-5 bg-dark text-white text-center">
+      <div class="container">
+        <h3 class="fw-bold text-warning mb-2">Prêt à rejoindre ce cycle d'ateliers ?</h3>
+        <p class="opacity-75 mb-4">Un parcours complet et outillant pour reconstruire votre sérénité étape par étape.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="/formations/burnout/programme/neurobiologie-et-relaxation" class="btn btn-outline-light px-4 py-2 rounded-pill">
+            ← Module précédent : Neurobiologie & Relaxation
+          </a>
+          <a href="/formations/burnout" class="btn btn-primary px-4 py-2 rounded-pill">
+            Vue d'ensemble de la formation →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Master>
+
+<style>
+  :global(#header) {
+    background: #1a0b33 !important;
+    z-index: 1030 !important;
+  }
+
+  .sidebar-sticky {
+    position: sticky;
+    top: 110px;
+    z-index: 10;
+  }
+
+  .module-hero {
+    padding-top: 130px;
+    background: linear-gradient(180deg, rgba(111, 66, 193, 0.06) 0%, #ffffff 100%);
+    border-bottom: 1px solid rgba(111, 66, 193, 0.1);
+  }
+
+  .breadcrumb a {
+    color: #6f42c1;
+    text-decoration: none;
+  }
+
+  .btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+  }
+  .btn-primary:hover {
+    background-color: #59339d;
+    border-color: #59339d;
+  }
+</style>
