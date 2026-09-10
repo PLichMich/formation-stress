@@ -27,6 +27,7 @@ jobs:
         # On injecte les variables configurées dans GitHub juste ici
         env:
           PUBLIC_STRESS_FORMATION_URL: ${{ vars.PUBLIC_STRESS_FORMATION_URL }}
+          PUBLIC_BURNOUT_FORMATION_URL: ${{ vars.PUBLIC_BURNOUT_FORMATION_URL }}
           PUBLIC_CONTACT_SCRIPT_URL: ${{ vars.PUBLIC_CONTACT_SCRIPT_URL }}
         run: npm run build
         
