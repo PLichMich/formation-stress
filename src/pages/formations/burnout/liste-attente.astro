@@ -2,7 +2,7 @@
 import Layout from '../../../layouts/Master.astro';
 ---
 
-<Layout title="Liste d'attente - Comprendre le stress | StressAction">
+<Layout title="Liste d'attente - Comprendre et surmonter le Burnout | StressAction">
   <main class="py-5 mt-5">
     <div class="container">
       <div class="row justify-content-center">
@@ -10,34 +10,34 @@ import Layout from '../../../layouts/Master.astro';
           
           <div class="text-center mb-5 mt-4">
             <h1 class="display-5 fw-bold text-primary">Liste d'attente</h1>
-            <h2 class="text-secondary">Comprendre le stress.</h2>
+            <h2 class="text-secondary">Comprendre et surmonter le Burnout</h2>
             <p class="lead text-muted">
-              Vous n'êtes pas disponible pour la session de mars ? Laissez vos coordonnées pour être averti(e) en priorité de la prochaine session (Mai/Juin 2026).
+              Le cycle actuel est complet ou vous n'êtes pas disponible pour les dates de septembre ? Laissez vos coordonnées pour être prévenu(e) en priorité de l'ouverture du prochain cycle à Péronnes-lez-Binche.
             </p>
           </div>
 
           <div class="card shadow-sm border-0 bg-light p-4 p-md-5">
             <form id="waitlistForm">
               <input type="hidden" name="type" value="liste_attente" />
-              <input type="hidden" name="formation" value="Comprendre le stress - Cycle suivant" />
+              <input type="hidden" name="formation" value="Burnout - Prochain cycle" />
 
               <div class="mb-4">
                 <label for="name" class="form-label fw-bold">Nom et Prénom</label>
-                <input type="text" id="name" name="name" class="form-control form-control-lg" placeholder="Votre nom" required />
+                <input type="text" id="name" name="name" class="form-control form-control-lg" placeholder="Ex: Jean Dupont" required />
               </div>
 
               <div class="mb-4">
                 <label for="email" class="form-label fw-bold">Adresse Email</label>
-                <input type="email" id="email" name="email" class="form-control form-control-lg" placeholder="nom@exemple.com" required />
+                <input type="email" id="email" name="email" class="form-control form-control-lg" placeholder="jean@email.be" required />
               </div>
 
               <div class="mb-4">
                 <label for="phone" class="form-label fw-bold">Numéro de téléphone</label>
-                <input type="tel" id="phone" name="phone" class="form-control form-control-lg" placeholder="Ex: 04XX / XX XX XX" required />
+                <input type="tel" id="phone" name="phone" class="form-control form-control-lg" placeholder="Ex: 0470 00 00 00" required />
               </div>
 
               <div class="d-grid gap-2">
-                <button type="submit" id="submitBtn" class="btn btn-primary btn-lg py-3">
+                <button type="submit" id="submitBtn" class="btn btn-primary btn-lg py-3 fw-bold">
                   M'inscrire sur la liste d'attente
                 </button>
               </div>
@@ -47,18 +47,18 @@ import Layout from '../../../layouts/Master.astro';
               <div class="mb-3">
                 <span class="display-4 text-success">✅</span>
               </div>
-              <h3 class="text-success">C'est noté !</h3>
-              <p>Votre inscription sur la liste d'attente a bien été enregistrée. Vous recevrez un email de confirmation d'ici quelques instants.</p>
-              <a href="/" class="btn btn-outline-primary mt-3">Retour à l'accueil</a>
+              <h3 class="text-success fw-bold">C'est bien noté !</h3>
+              <p>Votre inscription sur la liste d'attente a bien été enregistrée. Vous venez de recevoir un email de confirmation.</p>
+              <a href="/formations/burnout" class="btn btn-outline-primary mt-3">Retour à la présentation du Burnout</a>
             </div>
 
             <div id="errorMessage" class="alert alert-danger mt-4 d-none">
-              Une erreur est survenue. Veuillez réessayer ou me contacter par téléphone.
+              Une erreur est survenue lors de l'envoi. Veuillez réessayer ou nous contacter par téléphone.
             </div>
           </div>
 
           <p class="text-center text-muted mt-4 small">
-            En vous inscrivant, vous acceptez d'être recontacté(e) par StressAction pour l'organisation de futures sessions.
+            En vous inscrivant, vous acceptez d'être recontacté(e) par StressAction pour l'organisation des prochains ateliers.
           </p>
         </div>
       </div>
@@ -75,12 +75,10 @@ import Layout from '../../../layouts/Master.astro';
     transition: none !important;
   }
 
-  /* Force la couleur du texte du menu car il attend le scroll pour devenir sombre */
   #navmenu ul li a {
     color: #444 !important;
   }
 
-  /* Force les couleurs du logo */
   #header .logo-text-stress {
     color: #444 !important;
   }
@@ -88,7 +86,6 @@ import Layout from '../../../layouts/Master.astro';
     color: #6f42c1 !important;
   }
 
-  /* Correction pour le bouton menu mobile si besoin */
   .mobile-nav-toggle {
     color: #444 !important;
   }
@@ -100,14 +97,14 @@ import Layout from '../../../layouts/Master.astro';
   const successMessage = document.getElementById('successMessage');
   const errorMessage = document.getElementById('errorMessage');
 
-  // REMPLACE PAR TON URL DE DÉPLOIEMENT GOOGLE APPS SCRIPT
-const SCRIPT_URL = import.meta.env.PUBLIC_STRESS_FORMATION_URL;
+  // Utilise la variable d'environnement Burnout que nous venons de rendre opérationnelle
+  const SCRIPT_URL = import.meta.env.PUBLIC_BURNOUT_FORMATION_URL;
 
   form.addEventListener('submit', e => {
     e.preventDefault();
     
     submitBtn.disabled = true;
-    submitBtn.innerText = "Envoi en cours...";
+    submitBtn.innerText = "Enregistrement en cours...";
     errorMessage.classList.add('d-none');
 
     const formData = new FormData(form);
@@ -119,7 +116,7 @@ const SCRIPT_URL = import.meta.env.PUBLIC_STRESS_FORMATION_URL;
     .then(response => {
       form.classList.add('d-none');
       successMessage.classList.remove('d-none');
-      window.scrollTo(0, 0); // Remonte en haut pour voir le message de succès
+      window.scrollTo(0, 0);
     })
     .catch(error => {
       console.error('Erreur:', error);
