@@ -182,38 +182,38 @@ const dates = [
     </div>
   </section>
 
-  <script>
-    // Utilisation de la variable dédiée au burnout (ou fallback si tu partages le même script Google)
-    const SCRIPT_URL = import.meta.env.PUBLIC_BURNOUT_FORMATION_URL || import.meta.env.PUBLIC_STRESS_FORMATION_URL;
+<script>
+  // Astro injecte automatiquement la variable définie dans le .env
+  const SCRIPT_URL = import.meta.env.PUBLIC_BURNOUT_FORMATION_URL;
 
-    const regForm = document.getElementById('registrationForm');
+  const regForm = document.getElementById('registrationForm');
 
-    regForm.addEventListener('submit', e => {
-      e.preventDefault();
-      
-      const btn = document.getElementById('submitBtn');
-      const loader = document.getElementById('form-loader');
-      const successMsg = document.getElementById('form-success');
+  regForm.addEventListener('submit', e => {
+    e.preventDefault();
+    
+    const btn = document.getElementById('submitBtn');
+    const loader = document.getElementById('form-loader');
+    const successMsg = document.getElementById('form-success');
 
-      btn.disabled = true;
-      btn.style.display = 'none';
-      loader.style.display = 'block';
+    btn.disabled = true;
+    btn.style.display = 'none';
+    loader.style.display = 'block';
 
-      fetch(SCRIPT_URL, { method: 'POST', body: new FormData(regForm)})
-        .then(response => {
-          loader.style.display = 'none';
-          successMsg.style.display = 'block';
-          regForm.reset();
-        })
-        .catch(error => {
-          console.error('Erreur lors de la soumission :', error.message);
-          loader.style.display = 'none';
-          btn.style.display = 'block';
-          btn.disabled = false;
-          alert("Une erreur est survenue lors de l'envoi. Veuillez réessayer ou nous contacter directement.");
-        });
-    });
-  </script>
+    fetch(SCRIPT_URL, { method: 'POST', body: new FormData(regForm)})
+      .then(response => {
+        loader.style.display = 'none';
+        successMsg.style.display = 'block';
+        regForm.reset();
+      })
+      .catch(error => {
+        console.error('Erreur :', error.message);
+        loader.style.display = 'none';
+        btn.style.display = 'block';
+        btn.disabled = false;
+        alert("Une erreur est survenue lors de l'envoi du formulaire.");
+      });
+  });
+</script>
 
 </Master>
 
